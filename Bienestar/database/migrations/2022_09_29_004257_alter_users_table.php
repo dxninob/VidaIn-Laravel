@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('lastname');
-            $table->string('document');
-            $table->string('profession');           
-            $table->integer('age');
+            $table->string('document')->nullable();
+            $table->string('profession')->nullable();
+            $table->integer('age')->nullable();
             $table->integer('phone');
-            $table->string('emergencyName');
-            $table->integer('emergecyPhone');
+            $table->string('emergencyName')->nullable();
+            $table->integer('emergecyPhone')->nullable();
             $table->string('role')->default('patient');
         });
     }
