@@ -10,7 +10,7 @@
 
 <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-3">
         <div class="container">
             <a class="navbar-brand" href="#">BienEstar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,14 +20,14 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="#">Inicio</a>
                     <a class="nav-link active" href="#">Calendario</a>
-                    <a class="nav-link active" href="#">Actividades realizadas</a>
+                    <a class="nav-link active" href="#">Actividades</a>
                     <a class="nav-link active" href="#">Resultados</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="masthead bg-primary text-white text-center py-4">
+    <header class="masthead bg-primary text-white text-center py-3">
         <div class="container d-flex align-items-center flex-column">
         </div>
     </header>
