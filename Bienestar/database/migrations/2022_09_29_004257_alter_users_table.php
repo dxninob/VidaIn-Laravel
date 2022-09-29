@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('lastname');
+            $table->string('document');
             $table->string('profession');           
             $table->integer('age');
             $table->integer('phone');
