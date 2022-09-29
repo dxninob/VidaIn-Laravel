@@ -9,14 +9,14 @@ class UserMod extends Model
 {
     use HasFactory;
 
-    protected $table = 'usermods';
+    protected $table = 'usermod';
 
     public static function validate($request)
     {
         $request->validate([
-            "score" => "required|numeric|gt:0",
-            "module_id" => "required|exists:modules,id",
-            "user_id" => "required|exists:users,id",
+            "score" => "required",
+            "module_id" => "required",
+            "user_id" => "required",
         ]);
     }
 }
