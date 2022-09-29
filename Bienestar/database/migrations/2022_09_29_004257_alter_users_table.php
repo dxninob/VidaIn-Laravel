@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('age')->nullable();
             $table->bigInteger('phone');
             $table->string('emergencyName')->nullable();
-            $table->bigInteger('emergecyPhone')->nullable();
+            $table->bigInteger('emergencyPhone')->nullable();
             $table->string('role')->default('patient');
         });
     }

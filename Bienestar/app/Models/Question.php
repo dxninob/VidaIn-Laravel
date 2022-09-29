@@ -15,6 +15,7 @@ class Question extends Model
     {
         $request->validate([
             "question" => "required|max:255",
+            "module" => "required|max:255",
         ]);
     }
 }
