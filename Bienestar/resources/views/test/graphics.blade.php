@@ -159,7 +159,7 @@
                               color: '#892442',
                               radius: '104%',
                               innerRadius: '93%',
-                              y: 85,
+                              y: parseInt('{{ $viewData[0] }}'),
                          }],
                          yAxis: 0,
                     }, {
@@ -167,7 +167,7 @@
                               color: '#892442',
                               radius: '104%',
                               innerRadius: '93%',
-                              y: 20
+                              y: parseInt('{{ $viewData[1] }}')
                          }],
                          yAxis: 1
                     }, {
@@ -175,7 +175,7 @@
                               color: '#892442',
                               radius: '104%',
                               innerRadius: '93%',
-                              y: 60
+                              y: parseInt('{{ $viewData[3] }}')
                          }],
                          yAxis: 2
                     }, {
@@ -183,7 +183,7 @@
                               color: '#892442',
                               radius: '104%',
                               innerRadius: '93%',
-                              y: 40
+                              y: parseInt('{{ $viewData[2] }}')
                          }],
                          yAxis: 3
                     }, {
@@ -191,7 +191,7 @@
                               color: '#892442',
                               radius: '104%',
                               innerRadius: '93%',
-                              y: 40
+                              y: parseInt('{{ $viewData[4] }}')
                          }],
                          yAxis: 4
                     }]
