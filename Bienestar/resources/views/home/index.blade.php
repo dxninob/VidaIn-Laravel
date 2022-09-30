@@ -5,7 +5,7 @@
     Bienvenido a BienEstar
 </div>
 <br>
-<div class="text-center">
-    <a class="btn btn-primary bg-secondary" href="{{ route('test.index') }}">Hacer examen</a> 
+<div class="text-center parentElement">
+    <a class="btn btn-primary bg-secondary btn-size button" href="{{ route('test.index') }}">Hacer examen</a> 
 </div>
 @endsection
