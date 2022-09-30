@@ -72,26 +72,12 @@ class TestController extends Controller
             $usermod->save();
             $cont++;
         }
-    
-        
-//
-        //$data = [
-        //    ['score'=>$scoreModule1],
-        //    ['score'=>$scoreModule2],
-        //    ['score'=>$scoreModule3],
-        //    ['score'=>$scoreModule4],
-        //    ['score'=>$scoreModule5],
-        //];
-        //
-        //UserMod::insert($data);
-//
-        //    //echo($module1);
-        //    //$module_id = Question::where('id', strval($i))->get('module');
-            //$usermod_id = DB::table("usermod")->where('module_id', $module_id)->pluck('id')->first();
-            //$usermod = UserMod::all()->where('id', $usermod_id)->first();
-            //$usermod->score += intval($pregunta);
-            //$usermod->save();
-        
+        return redirect('/test/graphics');        
+    }
+
+    public function graphics()
+    {
+        return view('test.graphics');
     }
 
 }
