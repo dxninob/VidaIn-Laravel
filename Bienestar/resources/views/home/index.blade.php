@@ -6,6 +6,6 @@
 </div>
 <br>
 <div class="text-center">
-    <a class="btn btn-primary bg-secondary" href="">Hacer examen</a> 
+    <a class="btn btn-primary bg-secondary" href="{{ route('test.index') }}">Hacer examen</a> 
 </div>
 @endsection

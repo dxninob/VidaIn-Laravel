@@ -18,11 +18,11 @@
                     @foreach ($viewData['questions'] as $question)
                     <tr>
                         <td>{{ $question->id}}. {{ $question->question }}</td>
-                        <td style="text-align:center"><input readonly id="1" type="radio" name="{{ $question->id }}" value="1"></td>
-                        <td style="text-align:center"><input readonly id="2" type="radio" name="{{ $question->id }}" value="2"></td>
-                        <td style="text-align:center"><input readonly id="3" type="radio" name="{{ $question->id }}" value="3"></td>
-                        <td style="text-align:center"><input readonly id="4" type="radio" name="{{ $question->id }}" value="4"></td>
-                        <td style="text-align:center"><input readonly id="5" type="radio" name="{{ $question->id }}" value="5"></td>
+                        <td style="text-align:center"><input id="1" type="radio" name="{{ $question->id }}" value="1" required/></td>
+                        <td style="text-align:center"><input id="2" type="radio" name="{{ $question->id }}" value="2"/></td>
+                        <td style="text-align:center"><input id="3" type="radio" name="{{ $question->id }}" value="3"/></td>
+                        <td style="text-align:center"><input id="4" type="radio" name="{{ $question->id }}" value="4"/></td>
+                        <td style="text-align:center"><input id="5" type="radio" name="{{ $question->id }}" value="5"/></td>
                     </tr>
                     @endforeach
                 </table>
