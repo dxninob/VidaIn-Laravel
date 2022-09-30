@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Home Page - Online Store')
+@section('title', 'Home Page - BienEstar')
 @section('content')
 <div class="text-center">
     Bienvenido a BienEstar

@@ -84,7 +84,7 @@ class TestController extends Controller
         }
 
         $viewData = [];
-        $totals = [30,30,30,40,65];
+        $totals = [24,24,24,32,52];
         for ($i = 0; $i < 5; $i++) {
             $p = $scores[$i]/$totals[$i];
             array_push($viewData, $p*100);
