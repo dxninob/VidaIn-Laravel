@@ -48,4 +48,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function patients()
+    {
+        return $this->belongsToMany(User::class, 'doc_pat');
+    }
+
+    public function getPatients()
+    {
+        return $this->computers;
+    }
+
+    public function setPatients($computers)
+    {
+        $this->computers = $computers;
+    }
 }
