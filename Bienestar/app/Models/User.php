@@ -56,11 +56,11 @@ class User extends Authenticatable
 
     public function getPatients()
     {
-        return $this->computers;
+        return $this->patients;
     }
 
-    public function setPatients($computers)
+    public function setPatients($patients)
     {
-        $this->computers = $computers;
+        $this->patients = $patients;
     }
 }
