@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserMod;
 use Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -27,6 +28,21 @@ class UserController extends Controller
         $viewData = [];
         $user = User::findOrFail($id);
         $viewData["user"] = $user;
+
+
+        $scores = [];
+        $datos = UserMod::where('user_id', $user->id)->get();
+        foreach($datos as $dato) {
+            array_push($scores, $dato->score);
+        }
+        $pScores = [];
+        $totals = [30,30,30,40,65];
+        for ($i = 0; $i < 5; $i++) {
+            $p = $scores[$i]/$totals[$i];
+            array_push($pScores, $p*100);
+        }
+        $viewData['scores'] = $pScores;
+
         return view('doctor.user.show')->with("viewData", $viewData);
     }
 }
