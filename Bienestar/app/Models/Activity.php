@@ -17,4 +17,19 @@ class Activity extends Model
             "description" => "required|max:255",
         ]);
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_activities');
+    }
+
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    public function setUsers($users)
+    {
+        $this->users = $users;
+    }
 }
