@@ -15,23 +15,21 @@
                         <td style="text-align:center"> <strong> De acuerdo </strong></td>
                         <td style="text-align:center"> <strong> Totalmente de acuerdo </strong></td>
                     </tr>
-                    @foreach ($viewData['questions'] as $question)
+                    @foreach ($viewData['questions1-3'] as $question)
                     <tr>
                         <td>{{ $question->id}}. {{ $question->question }}</td>
-                        <td style="text-align:center"><input id="1" type="radio" name="{{ $question->id }}" value="1" required/></td>
-                        <td style="text-align:center"><input id="2" type="radio" name="{{ $question->id }}" value="2"/></td>
-                        <td style="text-align:center"><input id="3" type="radio" name="{{ $question->id }}" value="3"/></td>
-                        <td style="text-align:center"><input id="4" type="radio" name="{{ $question->id }}" value="4"/></td>
-                        <td style="text-align:center"><input id="5" type="radio" name="{{ $question->id }}" value="5"/></td>
+                        <td style="text-align:center"><input id="1" type="radio" name="{{ $question->id }}" value="1" required /></td>
+                        <td style="text-align:center"><input id="2" type="radio" name="{{ $question->id }}" value="2" /></td>
+                        <td style="text-align:center"><input id="3" type="radio" name="{{ $question->id }}" value="3" /></td>
+                        <td style="text-align:center"><input id="4" type="radio" name="{{ $question->id }}" value="4" /></td>
+                        <td style="text-align:center"><input id="5" type="radio" name="{{ $question->id }}" value="5" /></td>
                     </tr>
                     @endforeach
                 </table>
                 <br>
                 <div class="row mb-0">
                     <div>
-                        <button type="submit" class="btn btn-primary bg-secondary">
-                            {{ __('Terminar') }}
-                        </button>
+                        <button type="submit" class="btn btn-primary bg-secondary" name="index1" value="1">{{ __('Siguiente') }}</button>
                     </div>
                 </div>
             </form>

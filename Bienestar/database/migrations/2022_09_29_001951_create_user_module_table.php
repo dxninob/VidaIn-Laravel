@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('usermod', function (Blueprint $table) {
+        Schema::create('user_module', function (Blueprint $table) {
             $table->id();
             $table->integer('score');
             $table->unsignedBigInteger('user_id');
