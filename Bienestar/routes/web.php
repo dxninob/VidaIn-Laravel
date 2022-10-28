@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
+// Route::get('/', 'App\Http\Controllers\HomeController@home')->name("home.home");
+Route::get('/', 'App\Http\Controllers\HomeController@watchVideo')->name("home.watchVideo");
+Route::get('/index', 'App\Http\Controllers\HomeController@index')->name("home.index");
+Route::get('/users', 'App\Http\Controllers\HomeController@selectUser')->name("home.selectUser");
 
 Route::get('/test/index1', 'App\Http\Controllers\TestController@index')->name("test.index1");
 Route::post('/test/save', 'App\Http\Controllers\TestController@save')->name("test.save");
@@ -25,5 +28,7 @@ Route::get('/doctor/patients/{id}', 'App\Http\Controllers\UserController@show')-
 
 Route::get('/activities', 'App\Http\Controllers\ActivityController@show')->name("activities.show");
 Route::post('/activities/save/{id}', 'App\Http\Controllers\ActivityController@save')->name("activities.save");
+
+Route::get('/cuidador/inicio', 'App\Http\Controllers\CuidadorController@inicio')->name("cuidador.inicio");
 
 Auth::routes();
