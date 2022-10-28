@@ -14,7 +14,7 @@ class UserController extends Controller
     {
         $viewData = [];
         $user_id = Auth::id();
-        $users_id = DB::table('doc_pat')->where('doctor_id', $user_id)->pluck('patient_id')->toArray();
+        $users_id = DB::table('doctor_patient')->where('doctor_id', $user_id)->pluck('patient_id')->toArray();
         $users = [];
         foreach($users_id as $user_id) {
             $user = User::findOrFail($user_id);
