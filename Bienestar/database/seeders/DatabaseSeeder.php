@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Module;
 use App\Models\Question;
+use App\Models\Activity;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,34 +19,38 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        function import_CSV($filename, $delimiter = ','){
-            if(!file_exists($filename) || !is_readable($filename))
-              return false;
+        function import_CSV($filename, $delimiter = ',')
+        {
+            if (!file_exists($filename) || !is_readable($filename))
+                return false;
             $header = null;
             $data = array();
-            if (($handle = fopen($filename, 'r')) !== false){
-                while (($row = fgetcsv($handle, 1000, $delimiter)) !== false){
-                  if(!$header)
-                    $header = $row;
-                  else
-                    $data[] = array_combine($header, $row);
+            if (($handle = fopen($filename, 'r')) !== false) {
+                while (($row = fgetcsv($handle, 1000, $delimiter)) !== false) {
+                    if (!$header)
+                        $header = $row;
+                    else
+                        $data[] = array_combine($header, $row);
                 }
-                  fclose($handle);
+                fclose($handle);
             }
             return $data;
         }
-        
+
         $this->call([UserSeeder::class]);
         $this->call([ModuleSeeder::class]);
         $this->call([QuestionSeeder::class]);
+        $this->call([ActivitySeeder::class]);
 
         $userFile = resource_path("/seeders/users" . ".csv");
         $moduleFile = resource_path("/seeders/modules" . ".csv");
         $questionFile = resource_path("/seeders/questions" . ".csv");
+        $activityFile = resource_path("/seeders/activities" . ".csv");
 
         $userRecords = import_CSV($userFile);
         $moduleRecords = import_CSV($moduleFile);
         $questionRecords = import_CSV($questionFile);
+        $activityRecords = import_CSV($activityFile);
 
 
         // add each record to the posts table in DB
@@ -63,10 +68,10 @@ class DatabaseSeeder extends Seeder
                 'emergencyName' => $record['emergencyName'],
                 'emergencyPhone' => $record['emergencyPhone'],
                 'role' => $record['role'],
-                
+
             ]);
         }
-        
+
         foreach ($moduleRecords as $key => $record) {
             Module::create([
                 'name' => $record['name'],
@@ -81,11 +86,10 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        foreach ($activityRecords as $key => $record) {
+            Activity::create([
+                'description' => $record['description'],
+            ]);
+        }
     }
 }

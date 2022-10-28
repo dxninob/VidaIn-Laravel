@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usermod');
+        Schema::dropIfExists('user_module');
     }
 };
