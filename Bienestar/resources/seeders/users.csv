@@ -1,5 +1,7 @@
 id,name,email,email_verified_at,password,remember_token,created_at,updated_at,lastname,document,profession,age,phone,emergencyName,emergencyPhone,role
 1,Daniela,daniela.nino@gmail.com,,admin1234,,,,Niño,1000273652,doctor,30,3043509834,Paulina Jaramillo,3502837223,admin
-2,Samuel,samuel.ceballos@gmail.com,,patient1234,,,,Ceballos,1006972637,null,70,3058722167,Camila Mora,3003744984,patient
-3,Juan Pablo,juan.madrid@gmail.com,,patient1234,,,,Madrid,1000876234,null,85,3104562537,Simon Londono,3148058178,patient
-4,Mariana,mariana.valencia@gmail.com,,patient1236,,,,Valencia,1000022831,null,67,3104639173,Valentina Martinez,3016110852,patient
+2,Samuel,samuel.ceballos@gmail.com,,patient1234,,,,Ceballos,1006972637,doctor,35,3058722167,Camila Mora,3003744984,patient
+3,Juan Pablo,juan.madrid@gmail.com,,patient1234,,,,Madrid,1000876234,,85,3104562537,Simon Londono,3148058178,patient
+4,Mariana,mariana.valencia@gmail.com,,patient1234,,,,Valencia,1000022831,,67,3104639173,Valentina Martinez,3016110852,patient
+5,Alejandro,alejandro.torres@gmail.com,,patient1234,,,,Torres,1000254102,,65,3145261452,Simon Hoyos,3042561475,patient
+6,Martin,martin.villegas@gmail.com,,patient1234,,,,Villegas,1005248716,,85,3145782465,Manuela Morales,3254875498,patient
