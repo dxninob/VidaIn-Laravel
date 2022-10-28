@@ -18,19 +18,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" href="#">Inicio</a>
-                    <!-- @guest
-                    <a class="nav-link active" href="{{ route('login') }}">Iniciar sesión</a>
-                    <a class="nav-link active" href="{{ route('register') }}">Registrarse</a> -->
-                    <!-- @else -->
-                    <a class="nav-link active" href="#">Pacientes</a>
-                    <a class="nav-link active" href="#">Registro Paciente</a>
-                    <a class="nav-link active" href="#">Registro Actividad</a>
-                    <!-- <form id="logout" action="{{ route('logout') }}" method="POST">
-                        <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Cerrar sesión</a>
-                        @csrf
-                    </form> -->
-                    <!-- @endguest -->
+                    @guest
+                        <a class="nav-link active" href="{{ route('login') }}">Iniciar sesión</a>
+                        <a class="nav-link active" href="{{ route('register') }}">Registrarse</a>
+                        @else
+                        <a class="nav-link active" href="{{ route('doctor.user.index') }}">Pacientes</a>
+                        <form id="logout" action="{{ route('logout') }}" method="POST">
+                            <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Cerrar sesión</a>
+                            @csrf
+                        </form>
+                    @endguest                    
                 </div>
             </div>
         </div>
