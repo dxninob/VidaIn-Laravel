@@ -21,10 +21,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+
+    public function selectUser()
     {
-        $viewData = [];
-        $viewData["title"] = "BienEstar";
-        return view('home.index')->with("viewData", $viewData);
+        return view('home.selectUser');
+    }
+
+    public function watchVideo()
+    {
+        return view('home.watchVideo');
     }
 }
