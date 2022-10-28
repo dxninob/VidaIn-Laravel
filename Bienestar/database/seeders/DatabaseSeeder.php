@@ -10,6 +10,7 @@ use App\Models\Module;
 use App\Models\Question;
 use App\Models\Activity;
 use App\Models\DoctorPatient;
+use App\Models\ActivityModule;
 
 class DatabaseSeeder extends Seeder
 {
@@ -43,6 +44,7 @@ class DatabaseSeeder extends Seeder
         $this->call([QuestionSeeder::class]);
         $this->call([ActivitySeeder::class]);
         $this->call([DoctorPatientSeeder::class]);
+        $this->call([ActivityModuleSeeder::class]);
 
 
         $userFile = resource_path("/seeders/users" . ".csv");
@@ -50,12 +52,14 @@ class DatabaseSeeder extends Seeder
         $questionFile = resource_path("/seeders/questions" . ".csv");
         $activityFile = resource_path("/seeders/activities" . ".csv");
         $doctorPatientFile = resource_path("/seeders/doctor_patient" . ".csv");
+        $activityModuleFile = resource_path("/seeders/activity_module" . ".csv");
 
         $userRecords = import_CSV($userFile);
         $moduleRecords = import_CSV($moduleFile);
         $questionRecords = import_CSV($questionFile);
         $activityRecords = import_CSV($activityFile);
         $doctorPatientRecords = import_CSV($doctorPatientFile);
+        $activityModuleRecords = import_CSV($activityModuleFile);
 
 
         // add each record to the posts table in DB
@@ -101,6 +105,13 @@ class DatabaseSeeder extends Seeder
             DoctorPatient::create([
                 'doctor_id' => $record['doctor_id'],
                 'patient_id' => $record['patient_id'],
+            ]);
+        }
+
+        foreach ($activityModuleRecords as $key => $record) {
+            ActivityModule::create([
+                'activity_id' => $record['activity_id'],
+                'module_id' => $record['module_id'],
             ]);
         }
     }

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\UserMod;
-use Auth;
+use App\Models\UserModule;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -31,7 +31,7 @@ class UserController extends Controller
 
 
         $scores = [];
-        $datos = UserMod::where('user_id', $user->id)->get();
+        $datos = UserModule::where('user_id', $user->id)->get();
         foreach($datos as $dato) {
             array_push($scores, $dato->score);
         }

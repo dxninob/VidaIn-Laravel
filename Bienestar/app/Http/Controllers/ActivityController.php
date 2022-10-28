@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Auth;
-use App\Models\UserMod;
+use Illuminate\Support\Facades\Auth;
+use App\Models\UserModule;
 use App\Models\Activity;
 
 class ActivityController extends Controller
