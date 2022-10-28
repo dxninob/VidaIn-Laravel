@@ -19,6 +19,10 @@
     background-color: #892442 !important;
 }
 
+.letter-secondary {
+    color: #892442;
+}
+
 .btn-size {
     width: 100%;
     height: 110px;
