@@ -18,11 +18,19 @@
                     @foreach ($viewData['questions1-3'] as $question)
                     <tr>
                         <td>{{ $question->id}}. {{ $question->question }}</td>
+                        @if($question->id == 1 || $question->id == 3)
                         <td style="text-align:center"><input id="1" type="radio" name="{{ $question->id }}" value="1" required /></td>
                         <td style="text-align:center"><input id="2" type="radio" name="{{ $question->id }}" value="2" /></td>
                         <td style="text-align:center"><input id="3" type="radio" name="{{ $question->id }}" value="3" /></td>
                         <td style="text-align:center"><input id="4" type="radio" name="{{ $question->id }}" value="4" /></td>
                         <td style="text-align:center"><input id="5" type="radio" name="{{ $question->id }}" value="5" /></td>
+                        @else
+                        <td style="text-align:center"><input id="1" type="radio" name="{{ $question->id }}" value="5" required /></td>
+                        <td style="text-align:center"><input id="2" type="radio" name="{{ $question->id }}" value="4" /></td>
+                        <td style="text-align:center"><input id="3" type="radio" name="{{ $question->id }}" value="3" /></td>
+                        <td style="text-align:center"><input id="4" type="radio" name="{{ $question->id }}" value="2" /></td>
+                        <td style="text-align:center"><input id="5" type="radio" name="{{ $question->id }}" value="1" /></td>
+                        @endif
                     </tr>
                     @endforeach
                 </table>
