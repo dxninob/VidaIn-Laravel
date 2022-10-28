@@ -23,7 +23,7 @@
                          startAngle: 0,
                          endAngle: 360,
                          background: [{
-                              backgroundColor: Highcharts.Color('#892442')
+                              backgroundColor: Highcharts.Color('#4F7B09')
                                    .setOpacity(0.3)
                                    .get(),
                               borderWidth: 0
@@ -35,7 +35,7 @@
                          startAngle: 0,
                          endAngle: 360,
                          background: [{
-                              backgroundColor: Highcharts.Color('#892442')
+                              backgroundColor: Highcharts.Color('#4F7B09')
                                    .setOpacity(0.3)
                                    .get(),
                               borderWidth: 0
@@ -46,7 +46,7 @@
                          startAngle: 0,
                          endAngle: 360,
                          background: [{
-                              backgroundColor: Highcharts.Color('#892442')
+                              backgroundColor: Highcharts.Color('#4F7B09')
                                    .setOpacity(0.3)
                                    .get(),
                               borderWidth: 0
@@ -57,7 +57,7 @@
                          startAngle: 0,
                          endAngle: 360,
                          background: [{
-                              backgroundColor: Highcharts.Color('#892442')
+                              backgroundColor: Highcharts.Color('#4F7B09')
                                    .setOpacity(0.3)
                                    .get(),
                               borderWidth: 0
@@ -68,7 +68,7 @@
                          startAngle: 0,
                          endAngle: 360,
                          background: [{
-                              backgroundColor: Highcharts.Color('#892442')
+                              backgroundColor: Highcharts.Color('#4F7B09')
                                    .setOpacity(0.3)
                                    .get(),
                               borderWidth: 0
@@ -86,7 +86,7 @@
                               style: {
                                    fontSize: '40px',
                                    textOutline: false,
-                                   color: '#892442'
+                                   color: '#4F7B09'
                               }
                          },
                          rounded: true
@@ -156,7 +156,7 @@
 
                series: [{
                          data: [{
-                              color: '#892442',
+                              color: '#4F7B09',
                               radius: '104%',
                               innerRadius: '93%',
                               y: parseInt('{{ $viewData[0] }}'),
@@ -164,7 +164,7 @@
                          yAxis: 0,
                     }, {
                          data: [{
-                              color: '#892442',
+                              color: '#4F7B09',
                               radius: '104%',
                               innerRadius: '93%',
                               y: parseInt('{{ $viewData[1] }}')
@@ -172,7 +172,7 @@
                          yAxis: 1
                     }, {
                          data: [{
-                              color: '#892442',
+                              color: '#4F7B09',
                               radius: '104%',
                               innerRadius: '93%',
                               y: parseInt('{{ $viewData[3] }}')
@@ -180,7 +180,7 @@
                          yAxis: 2
                     }, {
                          data: [{
-                              color: '#892442',
+                              color: '#4F7B09',
                               radius: '104%',
                               innerRadius: '93%',
                               y: parseInt('{{ $viewData[2] }}')
@@ -188,7 +188,7 @@
                          yAxis: 3
                     }, {
                          data: [{
-                              color: '#892442',
+                              color: '#4F7B09',
                               radius: '104%',
                               innerRadius: '93%',
                               y: parseInt('{{ $viewData[4] }}')
