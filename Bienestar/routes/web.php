@@ -19,6 +19,9 @@ Route::get('/test/index', 'App\Http\Controllers\TestController@index')->name("te
 Route::post('/test/save', 'App\Http\Controllers\TestController@save')->name("test.save");
 Route::get('/test/graphics', 'App\Http\Controllers\TestController@graphics')->name("test.graphics");
 
+Route::get('/activities', 'App\Http\Controllers\ActivityController@show')->name("activities.show");
+Route::post('/activities/save/{id}', 'App\Http\Controllers\ActivityController@save')->name("activities.save");
+
 Route::get('/doctor/patients', 'App\Http\Controllers\UserController@index')->name("doctor.user.index");
 Route::get('/doctor/patients/{id}', 'App\Http\Controllers\UserController@show')->name("doctor.user.show");
 
