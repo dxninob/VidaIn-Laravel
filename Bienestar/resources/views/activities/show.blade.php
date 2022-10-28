@@ -5,29 +5,36 @@
 </div>
 <br>
 
-<table class="default">
-    <tr>
-        <td WIDTH="50%">
-            <h4 class="letter-secondary">¡Este es tu reto!</h4>
-        </td>
-    </tr>
-    <tr>
-        <td WIDTH="50%">
-            <div class="container d-flex align-items-center flex-column ">
-                <div class="p-3 shadow text-end">
-                    <p class="profile-font">Actividad {{ $viewData['activity']->id }}</p>
-                    <p class="profile-font">{{ $viewData['activity']->description }}</p>
-                </div>
-            </div>
+<link href="{{ asset('/css/activities.css') }}" rel="stylesheet" />
 
-        </td>
-        <td WIDTH="50%">
-            <form action="{{ route('activities.save', ['id'=> $viewData['activity']->id]) }}" method="POST">
-                @csrf
-                <button class="btn btn-secondary bg-secondary button" name='status' type='submit' value="1">Aceptar</button>
-                <button class="btn btn-secondary bg-secondary button" name='status' type='submit' value="2">Denegar</button> 
-            </form>
-        </td>
-    </tr>
-</table>
+<body>
+    <table class="default">
+        <tr>
+            <td WIDTH="50%">
+                <h4 class="letter-secondary">¡Este es tu reto!</h4>
+            </td>
+        </tr>
+        <tr>
+            <td WIDTH="50%">
+                <div class="container d-flex align-items-center flex-column ">
+                    <div class="containers">
+                        <p class="profile-font">Actividad {{ $viewData['activity']->id }}</p>
+                        <p class="profile-font">{{ $viewData['activity']->description }}</p>
+                    </div>
+                </div>
+
+            </td>
+            <td WIDTH="50%">
+                <form action="{{ route('activities.save', ['id'=> $viewData['activity']->id]) }}" method="POST">
+                    @csrf
+                    <div class="buttons">
+                        <button class="btn1" name='status' type='submit' value="1">Aceptar</button>
+                        <button class="btn2" name='status' type='submit' value="2">Denegar</button>
+                    </div> 
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+
 @endsection
