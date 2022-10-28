@@ -27,4 +27,20 @@ class HomeController extends Controller
         $viewData["title"] = "BienEstar";
         return view('home.index')->with("viewData", $viewData);
     }
+
+    public function selectUser()
+    {
+        return view('home.selectUser');
+    }
+
+    public function watchVideo()
+    {
+        return view('home.watchVideo');
+    }
+
+    public function home()
+    {
+        return view('home.home');
+    }
+
 }

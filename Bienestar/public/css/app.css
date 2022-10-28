@@ -15,8 +15,8 @@
 } 
 
 .bg-secondary {
-    border-color: #892442;
-    background-color: #892442 !important;
+    border-color: #4F7B09;
+    background-color: #4F7B09 !important;
 }
 
 .btn-size {
@@ -25,11 +25,11 @@
 }
 
 .copyright {
-    background-color: #892442;
+    background-color: #4F7B09;
 }
 
 .bg-primary {
-    background-color: #43A395 !important;
+    background-color: #12631ec5 !important;
 }
 
 nav {
@@ -46,3 +46,4 @@ nav {
     font-size: 15px;
     margin: 0 10px;
 }
+

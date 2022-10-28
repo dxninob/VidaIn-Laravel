@@ -23,4 +23,9 @@ class CuidadorController extends Controller
         $viewData["activities"] = $activities_array;
         return view('cuidador.activities')->with("viewData", $viewData);
     }
+
+    public function inicio()
+    {
+        return view('cuidador.inicio');
+    }
 }

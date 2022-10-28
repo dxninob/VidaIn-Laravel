@@ -1,0 +1,37 @@
+.container1 .button1{
+    background-color: #385904;
+    width: 425px;
+    height: 800px;
+    float: left;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    display: flex;
+    border-radius: 20px;
+    margin-right:10px;
+}
+
+.container2 .button2{
+    background-color: #A7DF4C;
+    width: 425px;
+    height: 800px;
+    float: left;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    display: flex;
+    border-radius: 20px;
+    margin-right:10px;
+}
+
+.container3 .button3{
+    background-color: #1D4B59;
+    width: 425px;
+    height: 800px;
+    float: left;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    display: flex;
+    border-radius: 20px;
+}
