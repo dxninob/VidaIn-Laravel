@@ -13,8 +13,8 @@ class ActivityController extends Controller
 
     public function show()
     {
-        $min_score = DB::table('usermod')->where('user_id', Auth::id())->min('score');
-        $module = DB::table('usermod')->where('score', $min_score)->first();
+        $min_score = DB::table('user_module')->where('user_id', Auth::id())->min('score');
+        $module = DB::table('user_module')->where('score', $min_score)->first();
         $module_id = $module->id;
 
         $activities = DB::table('activity_module')->where('module_id', $module_id)->pluck('activity_id')->toArray();
