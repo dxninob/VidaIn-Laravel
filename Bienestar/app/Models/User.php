@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         $this->patients = $patients;
     }
+
+    public function questions()
+    {
+        return $this->belongsToMany(Question::class, 'user_question');
+    }
 }

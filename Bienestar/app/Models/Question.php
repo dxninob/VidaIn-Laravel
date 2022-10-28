@@ -18,4 +18,9 @@ class Question extends Model
             "module" => "required|max:255",
         ]);
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_question');
+    }
 }

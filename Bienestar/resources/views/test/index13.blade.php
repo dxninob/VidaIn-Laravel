@@ -29,7 +29,7 @@
         <br>
         <div class="row mb-0">
           <div>
-            <button type="submit" class="btn btn-primary bg-secondary" name="index13" value="13">{{ __('Siguiente') }}</button>
+            <button type="submit" class="btn btn-primary bg-secondary" name="index13" value="13">{{ __('Terminar') }}</button>
           </div>
         </div>
       </form>
