@@ -8,7 +8,7 @@
       <div class="card-body text-center">
         <h5>{{ $user->name }} {{ $user->lastname }}</h5>
         <p>Documento: {{ $user->document }}</p>
-        <a href="{{ route('doctor.user.index', ['id'=> $user->id]) }}" class="btn bg-primary text-white">Ver</a>
+        <a href="{{ route('doctor.user.show', ['id'=> $user->id]) }}" class="btn bg-primary text-white">Ver</a>
       </div>
     </div>
   </div>
