@@ -35,11 +35,6 @@
         </div>
     </nav>
 
-    <header class="masthead bg-primary text-white text-center py-3">
-        <div class="container d-flex align-items-center flex-column">
-        </div>
-    </header>
-
     <!-- header -->
 
     <div class="container my-4">
