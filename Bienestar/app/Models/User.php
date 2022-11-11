@@ -20,14 +20,17 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'lastname',
-        'document',
         'email',
-        'password',
-        'profession',
-        'age',
+        'document',
+        'birthday',
         'phone',
-        'emergencyName',
-        'emergecyPhone',
+        'nameCuidador',
+        'documentCuidador',
+        'namePatient',
+        'documentPatient',
+        'entity',
+        'profession',
+        'password',
     ];
 
     /**
@@ -45,9 +48,6 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 
     public function patients()
     {
