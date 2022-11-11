@@ -19,6 +19,10 @@ Route::get('/', 'App\Http\Controllers\HomeController@watchVideo')->name("home.wa
 Route::get('/index', 'App\Http\Controllers\HomeController@index')->name("home.index");
 Route::get('/users', 'App\Http\Controllers\HomeController@selectUser')->name("home.selectUser");
 
+Route::get('/register/patient', 'App\Http\Controllers\AuthController@registerPatient')->name("register.patient");
+Route::get('/register/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
+Route::get('/register/cuidador', 'App\Http\Controllers\AuthController@registerCuidador')->name("register.cuidador");
+
 Route::get('/test/index1', 'App\Http\Controllers\TestController@index')->name("test.index1");
 Route::post('/test/save', 'App\Http\Controllers\TestController@save')->name("test.save");
 Route::get('/test/graphics', 'App\Http\Controllers\TestController@graphics')->name("test.graphics");
