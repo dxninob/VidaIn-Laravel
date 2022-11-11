@@ -65,14 +65,43 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'lastname' => $data['lastname'],
-            'document' => $data['document'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'age' => $data['age'],
-            'phone' => $data['phone'],
-        ]);
+        if($data['role'] == 'patient') {
+            return User::create([
+                'name' => $data['name'],
+                'lastname' => $data['lastname'],
+                'email' => $data['email'],
+                'document' => $data['document'],
+                'birthday' => $data['birthday'],  
+                'phone' => $data['phone'],  
+                'nameCuidador' => $data['nameCuidador'],  
+                'documentCuidador' => $data['documentCuidador'],  
+                'password' => Hash::make($data['password']),
+                'role' => $data['role']
+            ]);
+        } elseif ($data['role'] == 'doctor') {
+            return User::create([
+                'name' => $data['name'],
+                'lastname' => $data['lastname'],
+                'email' => $data['email'],
+                'document' => $data['document'],
+                'entity' => $data['entity'],            
+                'profession' => $data['profession'],            
+                'password' => Hash::make($data['password']),
+                'role' => $data['role']
+            ]);
+        } elseif ($data['role'] == 'cuidador') {
+            return User::create([
+                'name' => $data['name'],
+                'lastname' => $data['lastname'],
+                'email' => $data['email'],
+                'document' => $data['document'],
+                'birthday' => $data['birthday'],  
+                'phone' => $data['phone'],  
+                'namePatient' => $data['namePatient'],            
+                'documentPatient' => $data['documentPatient'],            
+                'password' => Hash::make($data['password']),
+                'role' => $data['role']
+            ]);
+        }
     }
 }
