@@ -18,14 +18,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('lastname');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->bigInteger('document')->nullable();
+            $table->bigInteger('document');
             $table->string('profession')->nullable();
             $table->integer('age')->nullable();
-            $table->bigInteger('phone');
-            $table->string('emergencyName')->nullable();
-            $table->bigInteger('emergencyPhone')->nullable();
+            $table->bigInteger('phone')->nullable();
+            $table->bigInteger('patientDocument')->nullable();
+            $table->bigInteger('relationship')->nullable();
             $table->string('role')->default('patient');
             $table->rememberToken();
             $table->timestamps();
