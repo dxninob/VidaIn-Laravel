@@ -71,13 +71,7 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt($record['password']),
                 'lastname' => $record['lastname'],
                 'document' => $record['document'],
-                'profession' => $record['profession'],
-                'age' => $record['age'],
                 'phone' => $record['phone'],
-                'emergencyName' => $record['emergencyName'],
-                'emergencyPhone' => $record['emergencyPhone'],
-                'role' => $record['role'],
-
             ]);
         }
 
