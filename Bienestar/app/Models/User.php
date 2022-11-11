@@ -31,6 +31,7 @@ class User extends Authenticatable
         'entity',
         'profession',
         'password',
+        'role'
     ];
 
     /**
