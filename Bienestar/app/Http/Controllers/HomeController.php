@@ -31,4 +31,9 @@ class HomeController extends Controller
     {
         return view('home.watchVideo');
     }
+
+    public function test()
+    {
+        return view('patient.test');
+    }
 }

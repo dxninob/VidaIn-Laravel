@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // Route::get('/', 'App\Http\Controllers\HomeController@home')->name("home.home");
+Route::get('/test', 'App\Http\Controllers\HomeController@test')->name("home.test");
 Route::get('/', 'App\Http\Controllers\HomeController@watchVideo')->name("home.watchVideo");
 Route::get('/index', 'App\Http\Controllers\HomeController@index')->name("home.index");
 Route::get('/users', 'App\Http\Controllers\HomeController@selectUser')->name("home.selectUser");
