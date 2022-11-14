@@ -1,0 +1,119 @@
+*{
+    background-color: #235390;
+}
+
+
+
+.introduccion{
+	overflow: hidden;
+	font-family: Quicksand;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+    padding-top:15%;
+}
+
+.introduccion2{
+	overflow: hidden;
+	font-family: Quicksand;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+#boton1{
+    font-weight: bold;
+    text-decoration:none;
+    color:#fff;
+    padding:1% 9%;
+    background-color:#2C60A3;
+    border-radius: 10px;
+    display: inline-flex;
+    font-family: Quicksand;
+	font-size: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 40px #0b0c0c;
+
+}
+
+#boton2{
+    font-weight: bold;
+    text-decoration:none;
+    color:#fff;
+    padding:0.6% 8%;
+    background-color:#2C60A3;
+    border-radius: 10px;
+    display: inline-flex;
+    font-family: Quicksand;
+	font-size: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 40px #0b0c0c;
+}
+
+#boton3{
+    font-weight: bold;
+    text-decoration:none;
+    color:#fff;
+    padding:0.4% 7.6%;
+    background-color:#2C60A3;
+    border-radius: 10px;
+    display: inline-flex;
+    font-family: Quicksand;
+	font-size: 50px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 40px #0b0c0c;
+}
+
+#boton1 { 
+    background: light-gray; 
+} 
+
+#boton1:hover { 
+    background: #58CC02; 
+    color: white; 
+}
+
+#boton1:active { 
+    background: gray; 
+    color: white; 
+} 
+
+#boton2 { 
+    background: light-gray; 
+} 
+
+#boton2:hover { 
+    background: #58CC02; 
+    color: white; 
+}
+
+#boton2:active { 
+    background: gray; 
+    color: white; 
+} 
+
+#boton3 { 
+    background: light-gray; 
+} 
+
+#boton3:hover { 
+    background: #58CC02; 
+    color: white; 
+}
+
+#boton3:active { 
+    background: gray; 
+    color: white; 
+} 

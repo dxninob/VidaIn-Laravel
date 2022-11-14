@@ -1,0 +1,154 @@
+*{
+    background-color: #235390;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.izquierda{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    padding-top:22%;
+    padding-left: 9%;
+}
+
+.derecha{
+    width: 70%;
+    height: 100vh;
+}
+
+#pantalla-dividida{
+    display: flex;
+}
+
+h1{
+    font-size: 40px;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+
+}
+
+.sub{
+    font-size: 30px;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: bold;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.introduccion{
+	overflow: hidden;
+	font-family: Quicksand;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	color:#ffffff;
+    padding-top:25%;
+    padding-bottom: 5%;
+}
+
+#boton1{
+    font-weight: bold;
+    text-decoration:none;
+    color:#fff;
+    padding:1% 17%;
+    background-color:#2C60A3;
+    border-radius: 10px;
+    display: inline-flex;
+    font-family: Quicksand;
+	font-size: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 40px #0b0c0c;
+
+}
+
+#boton2{
+    top: 5%;
+    font-weight: bold;
+    text-decoration:none;
+    color:#fff;
+    padding:1% 17.4%;
+    background-color:#2C60A3;
+    border-radius: 10px;
+    display: inline-flex;
+    font-family: Quicksand;
+	font-size: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 40px #0b0c0c;
+}
+
+#boton3{
+    top: 5%;
+    font-weight: bold;
+    text-decoration:none;
+    color:#fff;
+    padding:1% 13%;
+    background-color:#2C60A3;
+    border-radius: 10px;
+    display: inline-flex;
+    font-family: Quicksand;
+	font-size: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 40px #0b0c0c;
+}
+
+#boton1 { 
+    background: light-gray; 
+} 
+
+#boton1:hover { 
+    background: #58CC02; 
+    color: white; 
+}
+
+#boton1:active { 
+    background: gray; 
+    color: white; 
+} 
+
+#boton2 { 
+    background: light-gray; 
+} 
+
+#boton2:hover { 
+    background: #58CC02; 
+    color: white; 
+}
+
+#boton2:active { 
+    background: gray; 
+    color: white; 
+} 
+
+#boton3 { 
+    background: light-gray; 
+} 
+
+#boton3:hover { 
+    background: #58CC02; 
+    color: white; 
+}
+
+#boton3:active { 
+    background: gray; 
+    color: white; 
+} 
