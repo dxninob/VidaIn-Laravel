@@ -30,8 +30,9 @@ Route::get('/test/graphics', 'App\Http\Controllers\TestController@graphics')->na
 Route::get('/doctor/patients', 'App\Http\Controllers\UserController@index')->name("doctor.user.index");
 Route::get('/doctor/patients/{id}', 'App\Http\Controllers\UserController@show')->name("doctor.user.show");
 
-Route::get('/activities', 'App\Http\Controllers\ActivityController@show')->name("activities.show");
-Route::post('/activities/save/{id}', 'App\Http\Controllers\ActivityController@save')->name("activities.save");
+Route::get('/activities', 'App\Http\Controllers\ActivityController@index')->name("activity.index");
+Route::get('/activities/{id}', 'App\Http\Controllers\ActivityController@show')->name("activity.show");
+Route::post('/activities/save/{id}', 'App\Http\Controllers\ActivityController@save')->name("activity.save");
 
 Route::get('/cuidador/inicio', 'App\Http\Controllers\CuidadorController@inicio')->name("cuidador.inicio");
 

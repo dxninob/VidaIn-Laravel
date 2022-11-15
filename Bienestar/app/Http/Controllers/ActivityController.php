@@ -14,20 +14,22 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 class ActivityController extends Controller
 {
 
-    public function show()
+    public function index()
     {
-        $process = new Process(["python", "C:/Users/samue/Desktop/Universidad/2022-2/Proyecto/VidaIN/VidaIn-Laravel/Bienestar/public/recomendador.py", "1"], env: [
-            'SYSTEMROOT' => getenv('SYSTEMROOT'),
-            'PATH' => getenv("PATH")
-          ]);
+        $viewData = [];
+        $activities = Activity::all();
+        $viewData['activities'] = $activities;
+        return view('activity.index')->with("viewData", $viewData);
+    }
+    
+    public function show($id)
+    {
+        $viewData = [];
+        $activity = Activity::findOrFail($id);
+        $viewData["activity"] = $activity;
 
-        $process->run();
-        // executes after the command finishes
-        if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
-        }
 
-        print $process->getOutput();
+        return view('activity.show')->with("viewData", $viewData);
         
 
 

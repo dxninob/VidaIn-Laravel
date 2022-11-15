@@ -25,11 +25,11 @@
 
             </td>
             <td WIDTH="50%">
-                <form action="{{ route('activities.save', ['id'=> $viewData['activity']->id]) }}" method="POST">
+                <form action="{{ route('activity.save', ['id'=> $viewData['activity']->id]) }}" method="POST">
                     @csrf
                     <div class="buttons">
                         <button class="btn1" name='status' type='submit' value="1">Aceptar</button>
-                        <button class="btn2" name='status' type='submit' value="2">Denegar</button>
+                        <button class="btn2" name='status' type='submit' value="0">Denegar</button>
                     </div> 
                 </form>
             </td>

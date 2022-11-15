@@ -22,7 +22,7 @@
                     <a class="nav-link active" href="{{ route('login') }}">Iniciar sesión</a>
                     <a class="nav-link active" href="{{ route('register') }}">Registrarse</a>
                     @else
-                    <a class="nav-link active" href="{{ route('activities.show') }}">Actividades</a>
+                    <a class="nav-link active" href="{{ route('activity.index') }}">Actividades</a>
                     <a class="nav-link active" href="{{ route('test.graphics') }}">Resultados</a>
                     <form id="logout" action="{{ route('logout') }}" method="POST">
                         <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Cerrar sesión</a>
