@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('lastname');
             $table->string('email')->unique();
-            $table->bigInteger('document');
+            $table->bigInteger('document')->unique();
             $table->date('birthday')->default(date("2022-01-01 00:00:00"));   
             $table->bigInteger('phone')->default(0);  
             $table->string('nameCuidador')->default("");

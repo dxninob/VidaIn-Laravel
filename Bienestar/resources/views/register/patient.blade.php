@@ -54,6 +54,11 @@
 
                     <div class="col-md-6">
                         <input id="document" type="number" class="form-control @error('document') is-invalid @enderror" name="document" value="{{ old('document') }}" required autocomplete="document" autofocus>
+                        @error('document')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                 </div>
 
@@ -86,6 +91,11 @@
 
                     <div class="col-md-6">
                         <input id="documentCuidador" type="number" class="form-control @error('documentCuidador') is-invalid @enderror" name="documentCuidador" value="{{ old('documentCuidador') }}" required autocomplete="documentCuidador" autofocus>
+                        @error('documentCuidador')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                 </div>
 
