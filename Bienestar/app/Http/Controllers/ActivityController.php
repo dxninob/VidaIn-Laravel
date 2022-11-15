@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use App\Models\UserModule;
+use App\Models\UserActivity;
 use App\Models\Activity;
 
 use Symfony\Component\Process\Process;
@@ -17,11 +17,18 @@ class ActivityController extends Controller
     public function index()
     {
         $viewData = [];
-        $activities = Activity::all();
+
+        $doneActivitiesRecords = UserActivity::where('user_id', Auth::id())->get('activity_id');
+        $doneActivities = [];
+        foreach ($doneActivitiesRecords as $activity) {
+            array_push($doneActivities, $activity->activity_id);
+        }
+
+        $activities = Activity::whereNotIn('id', $doneActivities)->get()->random(3);
         $viewData['activities'] = $activities;
         return view('activity.index')->with("viewData", $viewData);
     }
-    
+
     public function show($id)
     {
         $viewData = [];
@@ -30,7 +37,7 @@ class ActivityController extends Controller
 
 
         return view('activity.show')->with("viewData", $viewData);
-        
+
 
 
         // $min_score = DB::table('user_module')->where('user_id', Auth::id())->min('score');
@@ -62,12 +69,12 @@ class ActivityController extends Controller
     {
         $status = $request->get('status');
         if ($status == '1') {
-            $data = array('user_id'=>Auth::id(), "activity_id"=>$id,"done"=>1);
+            $data = array('user_id' => Auth::id(), "activity_id" => $id, "done" => 1);
             DB::table('user_activity')->insert($data);
         } elseif ($status == '2') {
-            $data = array('user_id'=>Auth::id(), "activity_id"=>$id,"done"=>2);
+            $data = array('user_id' => Auth::id(), "activity_id" => $id, "done" => 2);
             DB::table('user_activity')->insert($data);
         }
-        return redirect('/activities');    
+        return redirect('/activities');
     }
 }
