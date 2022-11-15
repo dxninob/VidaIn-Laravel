@@ -53,7 +53,15 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'document' => ['unique:users'],
+            'documentCuidador' => ['unique:users'],
+            'documentPatient' => ['unique:users:document'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ], [
+            'email.unique' => 'Este correo ya está registrado.',
+            'document.unique' => 'Este documento ya está registrado.',
+            'documentCuidador.unique' => 'Este cuidador ya está a cargo de otro paciente.',
+            'documentPatient' => 'Otro cuidador ya está a cargo de este paciente.'
         ]);
     }
 
