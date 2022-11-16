@@ -6,8 +6,4 @@ use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
-    public function calendario()
-    {
-        return view('patient.actividades.calendario');
-    }
 }
