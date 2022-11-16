@@ -15,9 +15,15 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // Route::get('/', 'App\Http\Controllers\HomeController@home')->name("home.home");
-Route::get('/', 'App\Http\Controllers\HomeController@watchVideo')->name("home.watchVideo");
+Route::get('/video', 'App\Http\Controllers\HomeController@watchVideo')->name("home.watchVideo");
 Route::get('/index', 'App\Http\Controllers\HomeController@index')->name("home.index");
 Route::get('/users', 'App\Http\Controllers\HomeController@selectUser')->name("home.selectUser");
+Route::get('/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name("home.emergencia");
+Route::get('/intensidad', 'App\Http\Controllers\HomeController@intensidad')->name("home.intensidad");
+Route::get('/calendario', 'App\Http\Controllers\HomeController@calendario')->name("home.calendario");
+Route::get('/tamano', 'App\Http\Controllers\HomeController@tamano')->name("home.tamano");
+Route::get('/prueba', 'App\Http\Controllers\HomeController@prueba')->name("home.prueba");
+Route::get('/usuario', 'App\Http\Controllers\HomeController@usuario')->name("home.usuario");
 
 Route::get('/register/patient', 'App\Http\Controllers\AuthController@registerPatient')->name("register.patient");
 Route::get('/register/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
