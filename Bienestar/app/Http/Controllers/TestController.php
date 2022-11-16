@@ -22,6 +22,13 @@ class TestController extends Controller
 
     public function save()
     {
+        $questionsAnwered = UserQuestion::where("user_id", Auth::id())->get();
+        $questionCount = $questionsAnwered->count();
+
+        //if ($questionCount == 39) {
+        //    UserQuestion::where("user_id", Auth::id())->delete();
+        //}
+
         $viewData = [];
         $viewData["questions1-3"] = Question::whereBetween('id', [1, 3])->get();
         $viewData["questions4-6"] = Question::whereBetween('id', [4, 6])->get();
@@ -38,6 +45,7 @@ class TestController extends Controller
         $viewData["questions37-39"] = Question::whereBetween('id', [37, 39])->get();
 
         if (request("index1") == "1") {
+            UserQuestion::where("user_id", Auth::id())->delete();
             foreach ($viewData["questions1-3"] as $question) {
                 $userQuestion = new UserQuestion();
                 $userQuestion->user_id = Auth::id();
