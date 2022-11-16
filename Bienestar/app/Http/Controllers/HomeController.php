@@ -22,13 +22,19 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function selectUser()
+    // public function selectUser()
+    // {
+    //     return view('home.selectUser');
+    // }
+
+    // public function watchVideo()
+    // {
+    //     return view('home.watchVideo');
+    // }
+
+    public function index()
     {
-        return view('home.selectUser');
+        return view('index');
     }
 
-    public function watchVideo()
-    {
-        return view('home.watchVideo');
-    }
 }
