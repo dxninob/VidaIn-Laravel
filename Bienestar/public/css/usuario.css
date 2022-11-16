@@ -1,4 +1,4 @@
-*{
+.color-bg{
     background-color: #235390;
 }
 
@@ -11,7 +11,7 @@ body{
     width: 50%;
     margin: 0 auto;
     align-items: center;
-    padding-top:22%;
+    padding-top:15%;
     padding-left: 9%;
 }
 
@@ -39,7 +39,7 @@ body{
 	font-weight: bold;
 	text-align: center;
 	color:#ffffff;
-    padding-top:18%;
+    padding-top:5%;
     padding-bottom: 5%;
 }
 

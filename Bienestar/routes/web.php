@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/index', 'App\Http\Controllers\HomeController@index');
-// Route::get('/usuario', 'App\Http\Controllers\HomeController@usuario')->name("home.usuario");
+Route::get('/usuario', 'App\Http\Controllers\HomeController@user');
 // Route::get('/patient/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name("home.emergencia");
 // Route::get('/patient/intensidad', 'App\Http\Controllers\HomeController@intensidad')->name("home.intensidad");
 // Route::get('/patient/calendario', 'App\Http\Controllers\HomeController@calendario')->name("home.calendario");
