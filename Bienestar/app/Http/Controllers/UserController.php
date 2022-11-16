@@ -10,16 +10,32 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $viewData = [];
-        $user_id = Auth::id();
-        $users_id = DB::table('doctor_patient')->where('doctor_id', $user_id)->pluck('patient_id')->toArray();
+        $document = $request->get('buscarpor');
+        $order = $request->get('order');
         $users = [];
-        foreach($users_id as $user_id) {
-            $user = User::findOrFail($user_id);
-            array_push($users, $user);
+        $order_query = '';
+
+        if ($document) {
+            $users = User::where('document', $document)->paginate(100);
+        } else {
+            if ($order == '1') {
+                $order_query = 'asc';
+            } elseif ($order == '0') {
+                $order_query = 'desc';
+            } else {
+                $order_query = 'asc';
+            }
+        
+            $users_id = DB::table('users')->where('role', 'patient')->orderBy('name', $order_query)->orderBy('lastname', $order_query)->pluck('id')->toArray();   
+            foreach($users_id as $user_id) {
+                $user = User::findOrFail($user_id);
+                array_push($users, $user);
+            }
         }
+
+        $viewData = [];
         $viewData['users'] = $users;
         return view('doctor.user.index')->with("viewData", $viewData);
     }
