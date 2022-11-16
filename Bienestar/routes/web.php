@@ -25,10 +25,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/index', 'App\Http\Controllers\HomeController@index');
 Route::get('/usuario', 'App\Http\Controllers\HomeController@user');
 Route::get('/letra', 'App\Http\Controllers\HomeController@letra');
+Route::get('/paciente/calendario', 'App\Http\Controllers\PatientController@calendario');
 
 // Route::get('/patient/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name("home.emergencia");
 // Route::get('/patient/intensidad', 'App\Http\Controllers\HomeController@intensidad')->name("home.intensidad");
-// Route::get('/patient/calendario', 'App\Http\Controllers\HomeController@calendario')->name("home.calendario");
 // Route::get('/patient/prueba', 'App\Http\Controllers\HomeController@prueba')->name("home.prueba");
 
 
