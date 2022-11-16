@@ -42,4 +42,9 @@ class HomeController extends Controller
         return view('usuario');
     }
 
+    public function letra()
+    {
+        return view('letra');
+    }
+
 }

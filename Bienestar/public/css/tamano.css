@@ -1,8 +1,6 @@
-*{
+.color-bg{
     background-color: #235390;
 }
-
-
 
 .introduccion{
 	overflow: hidden;
@@ -11,7 +9,7 @@
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
-    padding-top:15%;
+    padding-top:3%;
 }
 
 .introduccion2{
