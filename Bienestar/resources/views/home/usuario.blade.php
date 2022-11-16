@@ -10,12 +10,12 @@
 </head>
 <body>
     <section id="pantalla-dividida">
-        <div class="izquierda">
-            <img src="{{ asset('/images/logo.png') }}" rel="stylesheet" width="60%">
+        <div id= "izquierda" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 red" >
+            <img src="{{ asset('/images/logo.png') }}" rel="stylesheet" width="80%">
         </div>
-        <div class="derecha">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 red">
             <div class="introduccion" >
-                <p> ¿Qué rol cumpliaras en la plataforma? </p>
+                <p> ¿Qué rol cumpliras en la plataforma? </p>
             </div>
             <div class="boton1" >
             <br>
@@ -24,7 +24,7 @@
         <div class="boton2" >
             <br>
             <br>
-            <a id="boton2" href="#">Comité</a>
+            <a id="boton2" href="#">BienEstar</a>
         </div>
         <div class="boton3" >
             <br>
@@ -35,3 +35,4 @@
     </section>
 </body>
 </html>
+

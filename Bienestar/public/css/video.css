@@ -1,26 +1,23 @@
 *{
     background-color: #235390;
-}
-
-.introduccion{
-    padding-top:23%;
+    margin: 10px;
 }
 
 #boton1{
+    padding-top: 10px;
     font-weight: bold;
     text-decoration:none;
     color:#fff;
-    padding:3% 9%;
+    padding:1% 9%;
     background-color:#2C60A3;
     border-radius: 10px;
     display: inline-flex;
     font-family: Quicksand;
-	font-size: 60px;
+	font-size: 40px;
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 5px 5px 40px #0b0c0c;
-    text-align: center;
 }
 
 #boton1 { 
@@ -32,8 +29,16 @@
     color: white; 
 }
 
-#boton1:active { 
-    background: gray; 
-    color: white; 
-} 
-
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:780px; 
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

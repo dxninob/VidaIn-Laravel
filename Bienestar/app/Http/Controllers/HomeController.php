@@ -39,4 +39,24 @@ class HomeController extends Controller
     public function usuario(){
         return view('home.usuario');
     }
+
+    public function emergencia(){
+        return view('home.emergencia');
+    }
+
+    public function intensidad(){
+        return view('home.intensidad');
+    }
+
+    public function video(){
+        return view('home.video');
+    }
+
+    public function calendario(){
+        return view('home.calendario');
+    }
+
+    public function navbar(){
+        return view('home.navbar');
+    }
 }
