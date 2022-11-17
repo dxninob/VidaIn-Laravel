@@ -9,11 +9,16 @@
     <title>BienEstar</title>
 </head>
 <body>
-    <div id= "botones" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 red" >
-        <br>
-        <a id="boton_izquierda" href="#">123</a>
-        <a id="boton_central" href="#">123</a>
-        <a id="boton_derecha" href="#">123</a>
+    <div id= "container" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 red">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 red" >
+            <a id="boton1" href="#">EMPIEZA AHORA</a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 red" >
+            <a id="boton1" href="#">EMPIEZA AHORA</a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 red" >
+            <a id="boton1" href="#">EMPIEZA AHORA</a>
+        </div>
     </div>
 </body>
 </html>

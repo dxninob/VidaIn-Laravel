@@ -59,4 +59,16 @@ class HomeController extends Controller
     public function navbar(){
         return view('home.navbar');
     }
+
+    public function registro(){
+        return view('home.registro');
+    }
+
+    public function planes(){
+        return view('home.planes');
+    }
+
+    public function dominio(){
+        return view('home.dominio');
+    }
 }
