@@ -54,11 +54,11 @@
                 </div>
 
                 <div class="row">
-                    <input id="namePatient" type="text" class="form-control @error('namePatient') is-invalid @enderror" name="namePatient" value="{{ old('namePatient') }}" placeholder="Nombre del paciente a su cargo" required autocomplete="namePatient" autofocus>
+                    <input id="nameCuidador" type="text" class="form-control @error('nameCuidador') is-invalid @enderror" name="nameCuidador" value="{{ old('nameCuidador') }}" placeholder="Nombre de su acompañante" required autocomplete="nameCuidador" autofocus>
                 </div>
 
                 <div class="row">
-                    <input id="documentPatient" type="number" class="form-control @error('documentPatient') is-invalid @enderror" name="documentPatient" value="{{ old('documentPatient') }}" placeholder="Documento del paciente a su cargo" required autocomplete="documentPatient" autofocus>
+                    <input id="documentCuidador" type="number" class="form-control @error('documentCuidador') is-invalid @enderror" name="documentCuidador" value="{{ old('documentCuidador') }}" placeholder="Documento de su acompañante" required autocomplete="documentCuidador" autofocus>
                 </div>
                 <div class="row">
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required autocomplete="new-password">
@@ -73,7 +73,7 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmar Contraseña" required autocomplete="new-password">
                 </div>
 
-                <input id="cuidador" type="hidden" name="role" value="cuidador">
+                <input id="patient" type="hidden" name="role" value="patient">
             </div>
 
             <div class="container2">
