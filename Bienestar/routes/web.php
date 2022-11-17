@@ -24,7 +24,8 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 Route::get('/usuario', 'App\Http\Controllers\HomeController@user')->name('user');
-Route::get('/letra', 'App\Http\Controllers\HomeController@letra');
+Route::get('/planes', 'App\Http\Controllers\HomeController@planes')->name('planes');
+Route::get('/letra', 'App\Http\Controllers\HomeController@letra')->name('letra');
 
 Route::get('/registro/paciente', 'App\Http\Controllers\AuthController@registerPatient')->name("register.patient");
 Route::get('/registro/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
@@ -39,15 +40,7 @@ Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index'
 
 // Route::get('/patient/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name("home.emergencia");
 // Route::get('/paciente/intensidad', 'App\Http\Controllers\PatientController@intensidad');
-// Route::get('/patient/prueba', 'App\Http\Controllers\HomeController@prueba')->name("home.prueba");
 
-
-
-
-
-
-
-// Route::post('/test/save', 'App\Http\Controllers\TestController@save')->name("test.save");
 // Route::get('/test/graphics', 'App\Http\Controllers\TestController@graphics')->name("test.graphics");
 
 // Route::get('/doctor/patients', 'App\Http\Controllers\UserController@index')->name("doctor.user.index");
@@ -55,7 +48,5 @@ Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index'
 
 // Route::get('/activities', 'App\Http\Controllers\ActivityController@show')->name("activities.show");
 // Route::post('/activities/save/{id}', 'App\Http\Controllers\ActivityController@save')->name("activities.save");
-
-// Route::get('/cuidador/inicio', 'App\Http\Controllers\CuidadorController@inicio')->name("cuidador.inicio");
 
 Auth::routes();

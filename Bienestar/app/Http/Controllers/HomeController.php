@@ -47,4 +47,9 @@ class HomeController extends Controller
         return view('letra');
     }
 
+    public function planes()
+    {
+        return view('planes');
+    }
+
 }
