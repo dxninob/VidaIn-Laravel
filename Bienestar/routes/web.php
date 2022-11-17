@@ -26,6 +26,8 @@ Route::get('/index', 'App\Http\Controllers\HomeController@index');
 Route::get('/usuario', 'App\Http\Controllers\HomeController@user');
 Route::get('/letra', 'App\Http\Controllers\HomeController@letra');
 Route::get('/paciente/calendario', 'App\Http\Controllers\ActivityController@calendario');
+Route::get('/paciente/test/index', 'App\Http\Controllers\TestController@index')->name("test.index");
+Route::post('/paciente/test/save', 'App\Http\Controllers\TestController@save')->name("test.save");
 
 // Route::get('/patient/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name("home.emergencia");
 // Route::get('/paciente/intensidad', 'App\Http\Controllers\PatientController@intensidad');
