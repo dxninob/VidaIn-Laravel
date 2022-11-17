@@ -22,19 +22,20 @@ use Illuminate\Support\Facades\Auth;
 
 
 
-Route::get('/index', 'App\Http\Controllers\HomeController@index');
-Route::get('/usuario', 'App\Http\Controllers\HomeController@user');
+Route::get('/', 'App\Http\Controllers\HomeController@index');
+Route::get('/usuario', 'App\Http\Controllers\HomeController@user')->name('user');
 Route::get('/letra', 'App\Http\Controllers\HomeController@letra');
 
-Route::get('/registro/paciente', 'App\Http\Controllers\AuthController@registerPatient');
-Route::get('/registro/doctor', 'App\Http\Controllers\AuthController@registerDoctor');
-Route::get('/registro/acompanante', 'App\Http\Controllers\AuthController@registerCuidador');
+Route::get('/registro/paciente', 'App\Http\Controllers\AuthController@registerPatient')->name("register.patient");
+Route::get('/registro/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
+Route::get('/registro/acompanante', 'App\Http\Controllers\AuthController@registerCuidador')->name("register.cuidador");
 
-Route::get('/paciente/calendario', 'App\Http\Controllers\ActivityController@calendario');
+Route::get('/paciente/prueba', 'App\Http\Controllers\PatientController@index')->name("home.test");
 Route::get('/paciente/prueba/index', 'App\Http\Controllers\TestController@index')->name("test.index");
+Route::get('/paciente/calendario', 'App\Http\Controllers\ActivityController@calendario');
 Route::post('/paciente/prueba/save', 'App\Http\Controllers\TestController@save')->name("test.save");
 
-Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index');
+Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index')->name('cuidador.index');
 
 // Route::get('/patient/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name("home.emergencia");
 // Route::get('/paciente/intensidad', 'App\Http\Controllers\PatientController@intensidad');
@@ -46,7 +47,6 @@ Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index'
 
 
 
-// Route::get('/test/index1', 'App\Http\Controllers\TestController@index')->name("test.index1");
 // Route::post('/test/save', 'App\Http\Controllers\TestController@save')->name("test.save");
 // Route::get('/test/graphics', 'App\Http\Controllers\TestController@graphics')->name("test.graphics");
 
