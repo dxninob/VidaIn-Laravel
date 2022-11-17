@@ -19,7 +19,7 @@
     <div class=botones>
         <div class="boton1">
             <br>
-            <a id="boton1" href="#">EMPIEZA AHORA</a>
+            <a id="boton1" href="{{ route('user') }}">EMPIEZA AHORA</a>
         </div>
         <div class="boton2">
             <br>

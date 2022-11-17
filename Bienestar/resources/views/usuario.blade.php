@@ -20,17 +20,17 @@
             </div>
             <div class="boton1">
                 <br>
-                <a id="boton1" href="#">Usuario</a>
+                <a id="boton1" href="{{ route('planes') }}">Usuario</a>
             </div>
             <div class="boton2">
                 <br>
                 <br>
-                <a id="boton2" href="#">BienEstar</a>
+                <a id="boton2" href="{{ route('register.doctor') }}">BienEstar</a>
             </div>
             <div class="boton3">
                 <br>
                 <br>
-                <a id="boton3" href="#">Acompañante</a>
+                <a id="boton3" href="{{ route('register.cuidador') }}">Acompañante</a>
             </div>
         </div>
     </section>

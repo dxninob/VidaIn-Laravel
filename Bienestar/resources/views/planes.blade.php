@@ -19,17 +19,17 @@
             </div>
             <div class="boton1" >
             <br>
-            <a id="boton1" href="#">Gratuito</a>
+            <a id="boton1" href="{{ route('register.patient') }}">Gratuito</a>
         </div>
         <div class="boton2" >
             <br>
             <br>
-            <a id="boton2" href="#">Premium</a>
+            <a id="boton2" href="{{ route('register.patient') }}">Premium</a>
         </div>
         <div class="boton3" >
             <br>
             <br>
-            <a id="boton3" href="#">Beneficiario</a>
+            <a id="boton3" href="{{ route('register.patient') }}">Beneficiario</a>
         </div>
         </div>
     </section>
