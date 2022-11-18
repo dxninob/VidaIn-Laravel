@@ -52,14 +52,14 @@ class DatabaseSeeder extends Seeder
         $questionFile = resource_path("/seeders/questions" . ".csv");
         $activityFile = resource_path("/seeders/activities" . ".csv");
         $doctorPatientFile = resource_path("/seeders/doctor_patient" . ".csv");
-        $activityModuleFile = resource_path("/seeders/activity_module" . ".csv");
+        // $activityModuleFile = resource_path("/seeders/activity_module" . ".csv");
 
         $userRecords = import_CSV($userFile);
         $moduleRecords = import_CSV($moduleFile);
         $questionRecords = import_CSV($questionFile);
         $activityRecords = import_CSV($activityFile);
         $doctorPatientRecords = import_CSV($doctorPatientFile);
-        $activityModuleRecords = import_CSV($activityModuleFile);
+        // $activityModuleRecords = import_CSV($activityModuleFile);
 
 
         // add each record to the posts table in DB
@@ -102,11 +102,11 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        foreach ($activityModuleRecords as $key => $record) {
-            ActivityModule::create([
-                'activity_id' => $record['activity_id'],
-                'module_id' => $record['module_id'],
-            ]);
-        }
+        // foreach ($activityModuleRecords as $key => $record) {
+        //     ActivityModule::create([
+        //         'activity_id' => $record['activity_id'],
+        //         'module_id' => $record['module_id'],
+        //     ]);
+        // }
     }
 }
