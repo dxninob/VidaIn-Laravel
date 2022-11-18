@@ -39,8 +39,8 @@
 
     <div id="container" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 red">
         <div class="boton1">
-            <a id="boton1" href="#">ACEPTAR</a>
-            <a id="boton1" href="#">DENEGAR</a>
+            <a id="boton1" href="{{ route('actividades.index') }}">ACEPTAR</a>
+            <a id="boton1" href="{{ route('actividades.index') }}">DENEGAR</a>
         </div>
     </div>
 </body>
