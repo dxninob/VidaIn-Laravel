@@ -27,7 +27,7 @@
                 <li class="nav-item"> <a class="nav-link" href="{{ route('test.resultados') }}">Resultados</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Actividades</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Progreso</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="{{ route('calendario') }}">Calendario</a> </li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="{{ route('actividades.calendario') }}">Calendario</a> </li> -->
 
             </ul>
         </div>
