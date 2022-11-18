@@ -256,19 +256,18 @@ class TestController extends Controller
 
     public function resultados()
     {
-    //     $scores = [];
-    //     $datos = UserModule::where('user_id', Auth::id())->get();
-    //     foreach ($datos as $dato) {
-    //         array_push($scores, $dato->score);
-    //     }
+        $scores = [];
+        $datos = UserModule::where('user_id', Auth::id())->get();
+        foreach ($datos as $dato) {
+            array_push($scores, $dato->score);
+        }
 
-    //     $viewData = [];
-    //     $totals = [30, 30, 30, 40, 65];
-    //     for ($i = 0; $i < 5; $i++) {
-    //         $p = $scores[$i] / $totals[$i];
-    //         array_push($viewData, $p * 100);
-    //     }
-        // return view('patient.prueba.resultados')->with("viewData", $viewData);
-        return view('patient.prueba.resultados');
+        $viewData = [];
+        $totals = [30, 30, 30, 40, 65];
+        for ($i = 0; $i < 5; $i++) {
+            $p = $scores[$i] / $totals[$i];
+            array_push($viewData, $p * 100);
+        }
+        return view('patient.prueba.resultados')->with("viewData", $viewData);
     }
 }
