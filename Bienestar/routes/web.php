@@ -24,6 +24,7 @@ Route::get('/video', 'App\Http\Controllers\HomeController@video')->name("home.vi
 Route::get('/registro', 'App\Http\Controllers\HomeController@registro')->name("home.registro");
 Route::get('/planes', 'App\Http\Controllers\HomeController@planes')->name("home.planes");
 Route::get('/dominio', 'App\Http\Controllers\HomeController@dominio')->name("home.dominio");
+Route::get('/modulo', 'App\Http\Controllers\HomeController@modulo')->name("home.modulo");
 Route::get('/test/index', 'App\Http\Controllers\TestController@index')->name("test.index");
 Route::post('/test/save', 'App\Http\Controllers\TestController@save')->name("test.save");
 Route::get('/test/graphics', 'App\Http\Controllers\TestController@graphics')->name("test.graphics");

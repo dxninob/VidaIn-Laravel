@@ -71,4 +71,8 @@ class HomeController extends Controller
     public function dominio(){
         return view('home.dominio');
     }
+
+    public function modulo(){
+        return view('home.modulo');
+    }
 }
