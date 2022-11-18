@@ -19,30 +19,12 @@ class ActivityController extends Controller
         return view('patient.actividades.calendario');
     }
 
-    public function show()
+    public function show($id)
     {
-        $min_score = DB::table('user_module')->where('user_id', Auth::id())->min('score');
-        $module = DB::table('user_module')->where('score', $min_score)->first();
-        $module_id = $module->id;
-
-        $activities = DB::table('activity_module')->where('module_id', $module_id)->pluck('activity_id')->toArray();
-        $act = -1;
-        foreach($activities as $activity_id) {
-            $done = DB::table('user_activity')->where('activity_id', $activity_id)->value('done');
-            if ($done == 1) {
-                continue;
-            } elseif ($done == 2) {
-                continue;
-            } else {
-                $act = $activity_id;
-                break; 
-            }
-        }
-
-        $activity = Activity::findOrFail($act);
         $viewData = [];
+        $activity = Activity::findOrFail($id);
         $viewData["activity"] = $activity;
-        $viewData["module"] = $module;
+
         return view('patient.actividades.show')->with("viewData", $viewData);
     }
 
