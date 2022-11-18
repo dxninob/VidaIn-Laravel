@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+    public function loginusuario()
+    {
+        return view('register.login');
+    }
+
     public function registerPatient()
     {
         return view('register.patient');

@@ -24,11 +24,16 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+                @guest
+                <li class="nav-item"> <a class="nav-link" href="{{ route('login.usuario') }}">Iniciar sesión</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('user') }}">Registro</a> </li>
+                @else
                 <li class="nav-item"> <a class="nav-link" href="{{ route('home.test') }}">Realizar prueba</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="{{ route('test.resultados') }}">Resultados</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="{{ route('actividades.index') }}">Actividades</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Progreso</a> </li>
                 <!-- <li class="nav-item"> <a class="nav-link" href="{{ route('actividades.calendario') }}">Calendario</a> </li> -->
+                @endguest
             </ul>
         </div>
     </nav>

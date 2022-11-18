@@ -20,6 +20,7 @@ Route::get('/planes', 'App\Http\Controllers\HomeController@planes')->name('plane
 Route::get('/letra', 'App\Http\Controllers\HomeController@letra')->name('letra');
 Route::get('/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name('emergencia');
 
+Route::get('/login/usuario', 'App\Http\Controllers\AuthController@loginusuario')->name("login.usuario");
 Route::get('/registro/paciente', 'App\Http\Controllers\AuthController@registerPatient')->name("register.patient");
 Route::get('/registro/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
 Route::get('/registro/acompanante', 'App\Http\Controllers\AuthController@registerCuidador')->name("register.cuidador");
