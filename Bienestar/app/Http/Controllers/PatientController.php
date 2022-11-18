@@ -10,4 +10,14 @@ class PatientController extends Controller
     {
         return view('patient.inicio.index');
     }
+
+    public function video()
+    {
+        return view('patient.inicio.video');
+    }
+
+    public function intensidad()
+    {
+        return view('patient.inicio.intensidad');
+    }
 }
