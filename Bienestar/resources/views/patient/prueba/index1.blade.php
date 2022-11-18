@@ -7,7 +7,7 @@
     <link href="{{ asset('/css/test.css') }}" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-    <title>@yield('title', 'BienEstar')</title>
+    
 </head>
 
 <body>
