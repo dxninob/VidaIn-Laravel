@@ -250,7 +250,7 @@ class TestController extends Controller
                 $cont++;
             }
 
-            return view('patient.prueba.resultados');
+            return redirect('/paciente/prueba/resultados');
         }
     }
 
