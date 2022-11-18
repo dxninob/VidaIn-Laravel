@@ -13,7 +13,7 @@ class ActivityController extends Controller
     public function index() {
         return view('patient.actividades.index');
     }
-    
+
     public function calendario()
     {
         return view('patient.actividades.calendario');
@@ -43,7 +43,7 @@ class ActivityController extends Controller
         $viewData = [];
         $viewData["activity"] = $activity;
         $viewData["module"] = $module;
-        return view('activities.show')->with("viewData", $viewData);
+        return view('patient.actividades.show')->with("viewData", $viewData);
     }
 
     public function save(Request $request, $id)
@@ -56,6 +56,6 @@ class ActivityController extends Controller
             $data = array('user_id'=>Auth::id(), "activity_id"=>$id,"done"=>2);
             DB::table('user_activity')->insert($data);
         }
-        return redirect('/activities');    
+        return view('patient.actividades.index');
     }
 }
