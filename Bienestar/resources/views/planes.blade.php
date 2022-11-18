@@ -23,7 +23,7 @@
         <div class="boton2" >
             <br>
             <br>
-            <a id="boton2" href="{{ route('letra') }}}">Premium</a>
+            <a id="boton2" href="{{ route('letra') }}">Premium</a>
         </div>
         <div class="boton3" >
             <br>
