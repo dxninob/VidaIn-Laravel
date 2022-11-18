@@ -23,7 +23,7 @@
         </div>
         <div class="boton2">
             <br>
-            <a id="boton2" href="#">YA TENGO CUENTA</a>
+            <a id="boton2" href="{{ route('login') }}">YA TENGO CUENTA</a>
         </div>
     </div>
 </body>
