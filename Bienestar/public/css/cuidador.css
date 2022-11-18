@@ -22,6 +22,15 @@
     padding-right: 10%;
 }
 
+.alinear {
+    padding-left: 17%;
+    padding-right: 12%;
+}
+
+.espacio {
+    padding-bottom: 10%;
+}
+
 #boton{
     text-align: center;
     font-weight: bold;
