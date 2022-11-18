@@ -30,8 +30,8 @@
                 </div>
             </div>
             <div class="boton1" >
-                <a id="boton1" href="#">ACEPTAR</a>
-                <a id="boton1" href="#">DENEGAR</a>
+                <a id="boton1" href="#">Sí</a>
+                <a id="boton1" href="#">No</a>
             </div>
         </div>
         <div id="container" class="col-xs-12 col-sm-12 col-md-7 col-lg-7 red">
@@ -41,8 +41,8 @@
                 </div>
             </div>
             <div class="boton1" >
-                <a id="boton1" href="#">ACEPTAR</a>
-                <a id="boton1" href="#">DENEGAR</a>
+                <a id="boton1" href="#">Sí</a>
+                <a id="boton1" href="#">No</a>
             </div>
         </div>
 </div>

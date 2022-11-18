@@ -75,7 +75,7 @@ body{
     border-radius: 10px;
     font-family: Quicksand;
 	font-size: 30px;
-    padding:1% 7%;
+    padding:1% 14%;
     text-align: center;
     float: left;
     margin: 1.5%;
@@ -93,7 +93,7 @@ body{
 }
 
 #boton1:active { 
-    background: gray; 
+    background: rgb(234, 9, 9); 
     color: white; 
 } 
 
