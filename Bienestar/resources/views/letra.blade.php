@@ -18,15 +18,15 @@
     </div>
     <div class="boton1">
         <br>
-        <a id="boton1" href="#">Pequeño</a>
+        <a id="boton1" href="{{ route('register.patient') }}">Pequeño</a>
     </div>
     <div class="boton2">
         <br>
-        <a id="boton2" href="#">Mediano</a>
+        <a id="boton2" href="{{ route('register.patient') }}">Mediano</a>
     </div>
     <div class="boton3">
         <br>
-        <a id="boton3" href="#">Grande</a>
+        <a id="boton3" href="{{ route('register.patient') }}">Grande</a>
     </div>
 </body>
 @endsection
