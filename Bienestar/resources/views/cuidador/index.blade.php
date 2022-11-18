@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.cuidador')
 @section('content')
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
         <p>Hola Acompañanante</p>
     </div>
     <div class="introduccion2">
-        <p>Acá tendras la opción de ver el progreso de Marta y hablar directamente con el comite para consultar cualquier duda que tengas.</p>
+        <p>Acá tendras la opción de ver el progreso del paciente y hablar directamente con el comite para consultar cualquier duda que tengas.</p>
     </div>
     <div class="alinear">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
