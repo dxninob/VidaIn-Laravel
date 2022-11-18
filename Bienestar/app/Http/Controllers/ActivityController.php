@@ -5,13 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use App\Models\UserModule;
+use App\Models\UserActivity;
 use App\Models\Activity;
 
 class ActivityController extends Controller
 {
     public function index() {
-        return view('patient.actividades.index');
+        $viewData = [];
+
+        $doneActivitiesRecords = UserActivity::where('user_id', Auth::id())->get('activity_id');
+        $doneActivities = [];
+        foreach ($doneActivitiesRecords as $activity) {
+            array_push($doneActivities, $activity->activity_id);
+        }
+
+        $activities = Activity::whereNotIn('id', $doneActivities)->get()->random(3);
+        $viewData['activities'] = $activities;
+        return view('patient.actividades.index')->with("viewData", $viewData);
     }
 
     public function calendario()

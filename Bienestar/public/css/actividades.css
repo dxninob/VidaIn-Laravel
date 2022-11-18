@@ -40,6 +40,8 @@ body{
     overflow: hidden;
     border-radius:10px;
     align-content: center;
+    padding-bottom: 25%;
+    border: none;
 }
 
 #container .box #content{

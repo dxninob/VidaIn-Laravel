@@ -18,30 +18,36 @@
             </div>
 
             <div id="container" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 red">
-                <div class="box">
-                    <div id="content">
-                        <a id="boton" href="#">COMENZAR</a>
-                        <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
-                    </div>
-                </div>
+                <a href="{{ route('activities.show', ['id'=> $viewData['activities'][1]->id]) }}">
+                    <button class="box">
+                        <div id="content">
+                            <p id="boton">{{ $viewData['activities'][0]->description }}</p>
+                            <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
+                        </div>
+                    </button>
+                </a>
             </div>
 
             <div id="container" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 red">
-                <div class="box">
-                    <div id="content">
-                        <a id="boton" href="#">COMENZAR</a>
-                        <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
-                    </div>
-                </div>
+                <a href="{{ route('activities.show', ['id'=> $viewData['activities'][1]->id]) }}">
+                    <button class="box">
+                        <div id="content">
+                            <p id="boton">{{ $viewData['activities'][1]->description }}</p>
+                            <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
+                        </div>
+                    </button>
+                </a>
             </div>
 
             <div id="container" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 red">
-                <div class="box">
-                    <div id="content">
-                        <a id="boton" href="#">COMENZAR</a>
-                        <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
-                    </div>
-                </div>
+                <a href="{{ route('activities.show', ['id'=> $viewData['activities'][1]->id]) }}">
+                    <button class="box">
+                        <div id="content">
+                            <p id="boton">{{ $viewData['activities'][2]->description }}</p>
+                            <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
+                        </div>
+                    </button>
+                </a>
             </div>
 
         </div>
