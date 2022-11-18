@@ -33,6 +33,8 @@ Route::get('/registro/paciente', 'App\Http\Controllers\AuthController@registerPa
 Route::get('/registro/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
 Route::get('/registro/acompanante', 'App\Http\Controllers\AuthController@registerCuidador')->name("register.cuidador");
 
+Route::get('/paciente/video', 'App\Http\Controllers\PatientController@video')->name("home.video");
+Route::get('/paciente/intensidad', 'App\Http\Controllers\PatientController@intensidad')->name("home.intensidad");
 Route::get('/paciente/prueba', 'App\Http\Controllers\PatientController@index')->name("home.test");
 Route::get('/paciente/prueba/index', 'App\Http\Controllers\TestController@index')->name("test.index");
 Route::post('/paciente/prueba/save', 'App\Http\Controllers\TestController@save')->name("test.save");
