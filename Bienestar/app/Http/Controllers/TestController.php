@@ -250,7 +250,7 @@ class TestController extends Controller
                 $cont++;
             }
 
-            return redirect('/paciente/test/resultados');
+            return view('patient.prueba.resultados');
         }
     }
 
@@ -265,8 +265,9 @@ class TestController extends Controller
         $viewData = [];
         $totals = [30, 30, 30, 40, 65];
         for ($i = 0; $i < 5; $i++) {
-            $p = $scores[$i] / $totals[$i];
-            array_push($viewData, $p * 100);
+            $p = $scores[$i] / $totals[$i] * 100;
+            $p = (int) $p;
+            array_push($viewData, $p);
         }
         return view('patient.prueba.resultados')->with("viewData", $viewData);
     }
