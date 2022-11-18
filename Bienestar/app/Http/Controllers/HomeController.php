@@ -79,4 +79,8 @@ class HomeController extends Controller
     public function actividad(){
         return view('home.actividad');
     }
+
+    public function puntuada(){
+        return view('home.puntuada');
+    }
 }
