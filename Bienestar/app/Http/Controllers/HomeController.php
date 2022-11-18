@@ -75,4 +75,8 @@ class HomeController extends Controller
     public function modulo(){
         return view('home.modulo');
     }
+
+    public function actividad(){
+        return view('home.actividad');
+    }
 }
