@@ -37,7 +37,7 @@ class DoctorController extends Controller
 
         $viewData = [];
         $viewData['users'] = $users;
-        return view('doctor.user.index')->with("viewData", $viewData);
+        return view('doctor.index')->with("viewData", $viewData);
     }
     
     public function show($id) {
@@ -59,6 +59,6 @@ class DoctorController extends Controller
         }
         $viewData['scores'] = $pScores;
 
-        return view('doctor.user.show')->with("viewData", $viewData);
+        return view('doctor.show')->with("viewData", $viewData);
     }
 }
