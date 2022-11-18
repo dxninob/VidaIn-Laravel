@@ -51,6 +51,9 @@ class ActivityController extends Controller
     //     return redirect('/activities');    
     // }
 
+    public function index() {
+        return view('patient.actividades.index');
+    }
     public function calendario()
     {
         return view('patient.actividades.calendario');

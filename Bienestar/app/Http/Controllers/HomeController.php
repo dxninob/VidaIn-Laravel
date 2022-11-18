@@ -52,4 +52,9 @@ class HomeController extends Controller
         return view('planes');
     }
 
+    public function emergencia()
+    {
+        return view('emergencia');
+    }
+
 }
