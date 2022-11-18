@@ -41,6 +41,8 @@ Route::post('/paciente/prueba/save', 'App\Http\Controllers\TestController@save')
 Route::get('/paciente/prueba/resultados', 'App\Http\Controllers\TestController@resultados')->name("test.resultados");
 Route::get('/paciente/actividades/index', 'App\Http\Controllers\ActivityController@index')->name("actividades.index");
 Route::get('/paciente/actividades/calendario', 'App\Http\Controllers\ActivityController@calendario')->name("actividades.calendario");
+Route::get('/paciente/actividades/save', 'App\Http\Controllers\ActivityController@save')->name("activities.save");
+Route::get('/paciente/actividades/{id}', 'App\Http\Controllers\ActivityController@show')->name("activities.show");
 
 Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index')->name('cuidador.index');
 
@@ -50,8 +52,5 @@ Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index'
 
 // Route::get('/doctor/patients', 'App\Http\Controllers\UserController@index')->name("doctor.user.index");
 // Route::get('/doctor/patients/{id}', 'App\Http\Controllers\UserController@show')->name("doctor.user.show");
-
-// Route::get('/activities', 'App\Http\Controllers\ActivityController@show')->name("activities.show");
-// Route::post('/activities/save/{id}', 'App\Http\Controllers\ActivityController@save')->name("activities.save");
 
 Auth::routes();
