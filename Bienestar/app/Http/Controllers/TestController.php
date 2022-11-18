@@ -254,8 +254,8 @@ class TestController extends Controller
         }
     }
 
-    // public function graphics()
-    // {
+    public function resultados()
+    {
     //     $scores = [];
     //     $datos = UserModule::where('user_id', Auth::id())->get();
     //     foreach ($datos as $dato) {
@@ -268,6 +268,7 @@ class TestController extends Controller
     //         $p = $scores[$i] / $totals[$i];
     //         array_push($viewData, $p * 100);
     //     }
-    //     return view('test.graphics')->with("viewData", $viewData);
-    // }
+        // return view('patient.prueba.resultados')->with("viewData", $viewData);
+        return view('patient.prueba.resultados');
+    }
 }

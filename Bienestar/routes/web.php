@@ -27,21 +27,22 @@ Route::get('/usuario', 'App\Http\Controllers\HomeController@user')->name('user')
 Route::get('/planes', 'App\Http\Controllers\HomeController@planes')->name('planes');
 Route::get('/letra', 'App\Http\Controllers\HomeController@letra')->name('letra');
 
+// Route::get('/login/users', 'App\Http\Controllers\AuthController@login')->name("login.users");
 Route::get('/registro/paciente', 'App\Http\Controllers\AuthController@registerPatient')->name("register.patient");
 Route::get('/registro/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
 Route::get('/registro/acompanante', 'App\Http\Controllers\AuthController@registerCuidador')->name("register.cuidador");
 
 Route::get('/paciente/prueba', 'App\Http\Controllers\PatientController@index')->name("home.test");
 Route::get('/paciente/prueba/index', 'App\Http\Controllers\TestController@index')->name("test.index");
-Route::get('/paciente/calendario', 'App\Http\Controllers\ActivityController@calendario');
 Route::post('/paciente/prueba/save', 'App\Http\Controllers\TestController@save')->name("test.save");
+Route::get('/paciente/prueba/resultados', 'App\Http\Controllers\TestController@resultados')->name("test.resultados");
+Route::get('/paciente/calendario', 'App\Http\Controllers\ActivityController@calendario');
 
 Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index')->name('cuidador.index');
 
 // Route::get('/patient/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name("home.emergencia");
 // Route::get('/paciente/intensidad', 'App\Http\Controllers\PatientController@intensidad');
 
-// Route::get('/test/graphics', 'App\Http\Controllers\TestController@graphics')->name("test.graphics");
 
 // Route::get('/doctor/patients', 'App\Http\Controllers\UserController@index')->name("doctor.user.index");
 // Route::get('/doctor/patients/{id}', 'App\Http\Controllers\UserController@show')->name("doctor.user.show");
