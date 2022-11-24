@@ -29,7 +29,7 @@
 }
 
 .bg-primary {
-    background-color: #43A395 !important;
+    background-color: gray !important;
 }
 
 nav {
@@ -45,4 +45,9 @@ nav {
     color: black;
     font-size: 15px;
     margin: 0 10px;
+}
+
+.margen {
+    padding: 3% 3% 3% 3%;
+    border: none;
 }

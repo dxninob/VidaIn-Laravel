@@ -28,7 +28,7 @@
     <div class="col-xs-8 col-sm-8 col-md-4 col-lg-4 margin-btn">
         <div class="boton1">
             <br>
-            <a id="boton1" href="{{ route('home.intensidad') }}">Continuar</a>
+            <a id="boton1" href="{{ route('home.test') }}">Continuar</a>
         </div>
     </div>
     <div class="col-xs-2 col-sm-2 col-md-4 col-lg-4 margin-btn">

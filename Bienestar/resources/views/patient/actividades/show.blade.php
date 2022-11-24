@@ -17,7 +17,7 @@
     <div id="container" class="col-xs-12 col-sm-12 col-md-5 col-lg-5 red">
         <div class="box">
             <div id="content">
-                <p> Tu cuerpo es templo de la naturaleza y del espíritu divino. Consérvalo sano, respétalo, estúdialo y concédele sus derechos.<br>Henri Frédéric Amiel, filósofo. </p>
+                <p>Actividad</p>
                 <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
             </div>
         </div>
