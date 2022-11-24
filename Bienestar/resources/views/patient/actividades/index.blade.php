@@ -18,7 +18,7 @@
             </div>
 
             <div id="container" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 red">
-                <a href="{{ route('activities.show', ['id'=> $viewData['activities'][1]->id]) }}">
+                <a href="{{ route('activities.show', ['id'=> $viewData['activities'][0]->id]) }}">
                     <button class="box">
                         <div id="content">
                             <p id="boton">{{ $viewData['activities'][0]->description }}</p>
@@ -40,7 +40,7 @@
             </div>
 
             <div id="container" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 red">
-                <a href="{{ route('activities.show', ['id'=> $viewData['activities'][1]->id]) }}">
+                <a href="{{ route('activities.show', ['id'=> $viewData['activities'][2]->id]) }}">
                     <button class="box">
                         <div id="content">
                             <p id="boton">{{ $viewData['activities'][2]->description }}</p>
