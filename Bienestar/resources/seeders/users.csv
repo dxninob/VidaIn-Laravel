@@ -1,0 +1,7 @@
+id,name,lastname,email,document,birthday,phone,nameCuidador,documentCuidador,namePatient,documentPatient,entity,profession,password,role,email_verified_at,remember_token,created_at,updated_at
+1,Daniela,Niño,daniela.nino@gmail.com,1000273652,,3043509834,,,,,,,doctor1234,,,,,
+2,Samuel,Ceballos,samuel.ceballos@gmail.com,1006972637,,3058722167,,,,,,,doctor1234,,,,,
+3,Juan Pablo,Madrid,juan.madrid@gmail.com,1000876234,,3104562537,,,,,,,patient1234,,,,,
+4,Mariana,Valencia,mariana.valencia@gmail.com,1000022831,,3104639173,,,,,,,patient1234,,,,,
+5,Alejandro,Torres,alejandro.torres@gmail.com,1000254102,,3145261452,,,,,,,patient1234,,,,,
+6,Martin,Villegas,martin.villegas@gmail.com,1005248716,,3145782465,,,,,,,patient1234,,,,,

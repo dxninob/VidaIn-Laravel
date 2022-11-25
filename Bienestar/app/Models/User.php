@@ -19,8 +19,19 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'lastname',
         'email',
+        'document',
+        'birthday',
+        'phone',
+        'nameCuidador',
+        'documentCuidador',
+        'namePatient',
+        'documentPatient',
+        'entity',
+        'profession',
         'password',
+        'role'
     ];
 
     /**
@@ -38,7 +49,24 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+
+    public function patients()
+    {
+        return $this->belongsToMany(User::class, 'doctor_patient');
+    }
+
+    public function getPatients()
+    {
+        return $this->patients;
+    }
+
+    public function setPatients($patients)
+    {
+        $this->patients = $patients;
+    }
+
+    public function questions()
+    {
+        return $this->belongsToMany(Question::class, 'user_question');
+    }
 }

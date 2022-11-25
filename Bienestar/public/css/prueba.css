@@ -1,0 +1,38 @@
+.color-bg{
+    background-color: #235390;
+}
+
+.introduccion{
+    padding-top: 13%;
+}
+
+#boton1{
+    font-weight: bold;
+    text-decoration:none;
+    color:#fff;
+    padding:3% 9%;
+    background-color:#2C60A3;
+    border-radius: 10px;
+    display: inline-flex;
+    font-family: Quicksand;
+	font-size: calc(60px + 0.390625vw);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 40px #0b0c0c;
+    text-align: center;
+}
+
+#boton1 { 
+    background: light-gray; 
+} 
+
+#boton1:hover { 
+    background: #58CC02; 
+    color: white; 
+}
+
+#boton1:active { 
+    background: gray; 
+    color: white; 
+} 
