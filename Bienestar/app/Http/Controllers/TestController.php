@@ -41,6 +41,7 @@ class TestController extends Controller
 
         if (request("index1") == "1") {
             UserQuestion::where("user_id", Auth::id())->delete();
+            UserModule::where("user_id", Auth::id())->delete();
             foreach ($viewData["questions1-3"] as $question) {
                 $userQuestion = new UserQuestion();
                 $userQuestion->user_id = Auth::id();
