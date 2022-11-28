@@ -29,7 +29,7 @@
             <div class="espacio">
 
                 <div class="boton">
-                    <a id="boton" href="#">Resultados<br>del test</a>
+                    <a id="boton" href="{{ route('cuidador.resultados') }}">Resultados<br>del test</a>
                 </div>
             </div>
         </div>

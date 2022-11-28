@@ -1,4 +1,4 @@
-@extends('layouts.cuidador')
+@extends('layouts.doctor')
 @section('content')
 
 <head>
@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/pacientes.css') }}">
     <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
 </head>
 <div class="row">
     <br>
     <br>
+    <div id="container" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search">
+
     <div id="border margen" class="border margen">
         <form action="{{ route('doctor.pacientes') }}">
 
@@ -21,21 +23,23 @@
                 <option value="1">A-Z</option>
                 <option value="0">Z-A</option>
             </select>
-            <input type="submit" class="btn bg-primary text-white" value="Filtrar">
+            <input type="submit" class="btn text-white color-btn-fil" value="Filtrar">
         </form>
-    </div>
-
+    </div></div>
+</div>
+<div class="row">
     @foreach ($viewData["users"] as $user)
-    <div class="col-md-4 col-lg-3 mb-2">
-        <div class="card">
-
-            <div class="card-body text-center">
-                <h5>{{ $user->name }} {{ $user->lastname }}</h5>
-                <p>Documento: {{ $user->document }}</p>
-                <a href="{{ route('doctor.show', ['id'=> $user->id]) }}" class="btn bg-primary text-white">Ver</a>
-            </div>
-        </div>
+    <div id="container" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 red">
+        <a href="{{ route('doctor.show', ['id'=> $user->id]) }}">
+            <button class="box">
+                <div id="content">
+                    <p id="boton">{{ $user->name }} {{ $user->lastname }}</p>
+                    <p id="boton">{{ $user->document }}</p>
+                    <div class="icon"><i class="ic fas fa-thin fa-star"></i></i></div>
+                </div>
+            </button>
+        </a>
     </div>
-    @endforeach
+@endforeach
 </div>
 @endsection

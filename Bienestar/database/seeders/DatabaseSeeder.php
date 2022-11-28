@@ -10,6 +10,7 @@ use App\Models\Module;
 use App\Models\Question;
 use App\Models\Activity;
 use App\Models\DoctorPatient;
+use App\Models\UserModule;
 use App\Models\ActivityModule;
 
 class DatabaseSeeder extends Seeder
@@ -45,13 +46,14 @@ class DatabaseSeeder extends Seeder
         $this->call([ActivitySeeder::class]);
         $this->call([DoctorPatientSeeder::class]);
         $this->call([ActivityModuleSeeder::class]);
-
+        $this->call([UserModuleSeeder::class]);
 
         $userFile = resource_path("/seeders/users" . ".csv");
         $moduleFile = resource_path("/seeders/modules" . ".csv");
         $questionFile = resource_path("/seeders/questions" . ".csv");
         $activityFile = resource_path("/seeders/activities" . ".csv");
         $doctorPatientFile = resource_path("/seeders/doctor_patient" . ".csv");
+        $userModuleFile = resource_path("/seeders/user_module" . ".csv");
         // $activityModuleFile = resource_path("/seeders/activity_module" . ".csv");
 
         $userRecords = import_CSV($userFile);
@@ -59,6 +61,7 @@ class DatabaseSeeder extends Seeder
         $questionRecords = import_CSV($questionFile);
         $activityRecords = import_CSV($activityFile);
         $doctorPatientRecords = import_CSV($doctorPatientFile);
+        $userModuleRecords = import_CSV($userModuleFile);
         // $activityModuleRecords = import_CSV($activityModuleFile);
 
 
@@ -67,11 +70,18 @@ class DatabaseSeeder extends Seeder
         foreach ($userRecords as $key => $record) {
             User::create([
                 'name' => $record['name'],
-                'email' => $record['email'],
-                'password' => bcrypt($record['password']),
                 'lastname' => $record['lastname'],
+                'email' => $record['email'],
                 'document' => $record['document'],
                 'phone' => $record['phone'],
+                'nameCuidador'  => $record['nameCuidador'],
+                'documentCuidador' => $record['documentCuidador'],
+                'namePatient' => $record['namePatient'],
+                'documentPatient' => $record['documentPatient'],
+                'entity' => $record['entity'],
+                'profession' => $record['profession'],
+                'role' => $record['role'],
+                'password' => bcrypt($record['password']),
             ]);
         }
 
@@ -102,6 +112,13 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
+        foreach ($userModuleRecords as $key => $record) {
+            UserModule::create([
+                'score' => $record['score'],
+                'user_id' => $record['user_id'],
+                'module_id' => $record['module_id'],
+            ]);
+        }
         // foreach ($activityModuleRecords as $key => $record) {
         //     ActivityModule::create([
         //         'activity_id' => $record['activity_id'],

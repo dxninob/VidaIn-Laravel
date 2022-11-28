@@ -1,211 +1,61 @@
-@extends('layouts.cuidador')
+@extends('layouts.doctor')
 @section('content')
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-<div class="card mb-3">
-  <div class="row g-0">
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">
-          {{ $viewData["user"]->name }} {{ $viewData["user"]->lastname }}
-        </h5>
-        <p class="card-text">Documento: {{ $viewData["user"]->document }}</p>
-        <p class="card-text">Email: {{ $viewData["user"]->email }}</p>
-        <p class="card-text">Edad: {{ $viewData["user"]->age }} años</p>
-        <p class="card-text">Celular: {{ $viewData["user"]->phone }}</p>    
-      </div>
-    </div>
-  </div>
-</div>
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+     <link href="{{ asset('/css/paciente.css') }}" rel="stylesheet" />
+     <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
 
-<figure class="highcharts-figure">
-     <div id="container"></div>
-     <script>
-          Highcharts.chart('container', {
-               title: null,
-               chart: {
-                    type: 'solidgauge'
-               },
-               
-               credits: {
-                    enabled: false
-               },
-               pane: [{
-                         startAngle: 0,
-                         endAngle: 360,
-                         background: [{
-                              backgroundColor: Highcharts.Color('#022B3A')
-                                   .setOpacity(0.3)
-                                   .get(),
-                              borderWidth: 0
-                         }],
-                         
-                         center: ['25%', '25%'],
-                         size: '33%'
-                    }, {
-                         startAngle: 0,
-                         endAngle: 360,
-                         background: [{
-                              backgroundColor: Highcharts.Color('#022B3A')
-                                   .setOpacity(0.3)
-                                   .get(),
-                              borderWidth: 0
-                         }],
-                         center: ['50%', '25%'],
-                         size: '33%'
-                    }, {
-                         startAngle: 0,
-                         endAngle: 360,
-                         background: [{
-                              backgroundColor: Highcharts.Color('#022B3A')
-                                   .setOpacity(0.3)
-                                   .get(),
-                              borderWidth: 0
-                         }],
-                         center: ['75%', '25%'],
-                         size: '33%'
-                    }, {
-                         startAngle: 0,
-                         endAngle: 360,
-                         background: [{
-                              backgroundColor: Highcharts.Color('#022B3A')
-                                   .setOpacity(0.3)
-                                   .get(),
-                              borderWidth: 0
-                         }],
-                         center: ['25%', '75%'],
-                         size: '33%'
-                    }, {
-                         startAngle: 0,
-                         endAngle: 360,
-                         background: [{
-                              backgroundColor: Highcharts.Color('#022B3A')
-                                   .setOpacity(0.3)
-                                   .get(),
-                              borderWidth: 0
-                         }],
-                         center: ['75%', '75%'],
-                         size: '33%'
-                    }],
-               plotOptions: {
-                    solidgauge: {
-                         dataLabels: {
-                              enabled: true,
-                              borderWidth: 0,
-                              y: -29,
-                              style: {
-                                   fontSize: '40px',
-                                   textOutline: false,
-                                   color: '#022B3A'
-                              }
-                         },
-                         rounded: true
-                    }
-               },
-               tooltip: {
-                    enabled: false
-               },
-               yAxis: [{  
-                         title: {
-                              text: "Autoaceptacion",
-                              x: 0,
-                              y: 120,
-                         },
-                         min: 0,
-                         max: 100,
-                         lineWidth: 0,
-                         tickPositions: [],
-                         pane: 0
-                    }, {
-                         title: {
-                              text: "Dominio del entorno",
-                              x: 0,
-                              y: 120,
-                         },
-                         min: 0,
-                         max: 100,
-                         lineWidth: 0,
-                         tickPositions: [],
-                         pane: 1
-                    }, {
-                         title: {
-                              text: "Autonomía",
-                              x: 0,
-                              y: 120,
-                         },
-                         min: 0,
-                         max: 100,
-                         lineWidth: 0,
-                         tickPositions: [],
-                         pane: 2
-                    }, {
-                         title: {
-                              text: "Relaciones positivas con los demás",
-                              x: 0,
-                              y: 120,
-                         },
-                         min: 0,
-                         max: 100,
-                         lineWidth: 0,
-                         tickPositions: [],
-                         pane: 3
-                    }, {
-                         title: {
-                              text: "Propósito de vida y crecimiento personal",
-                              x: 0,
-                              y: 120,
-                         },
-                         min: 0,
-                         max: 100,
-                         lineWidth: 0,
-                         tickPositions: [],
-                         pane: 4
-                    }],
-               series: [{
-                         data: [{
-                              color: '#022B3A',
-                              radius: '104%',
-                              innerRadius: '93%',
-                              y: parseInt('{{ $viewData["scores"][0] }}'),
-                         }],
-                         yAxis: 0,
-                    }, {
-                         data: [{
-                              color: '#022B3A',
-                              radius: '104%',
-                              innerRadius: '93%',
-                              y: parseInt('{{ $viewData["scores"][1] }}')
-                         }],
-                         yAxis: 1
-                    }, {
-                         data: [{
-                              color: '#022B3A',
-                              radius: '104%',
-                              innerRadius: '93%',
-                              y: parseInt('{{ $viewData["scores"][3] }}')
-                         }],
-                         yAxis: 2
-                    }, {
-                         data: [{
-                              color: '#022B3A',
-                              radius: '104%',
-                              innerRadius: '93%',
-                              y: parseInt('{{ $viewData["scores"][2] }}')
-                         }],
-                         yAxis: 3
-                    }, {
-                         data: [{
-                              color: '#022B3A',
-                              radius: '104%',
-                              innerRadius: '93%',
-                              y: parseInt('{{ $viewData["scores"][4] }}')
-                         }],
-                         yAxis: 4
-                    }]
-          });
-     </script>
-</figure>
+</head>
+
+<body>
+     <div class="container">
+          <h1 class="titulo">{{ $viewData["user"]->name }} {{ $viewData["user"]->lastname }}</h1>
+          <h5 class="new-font">Documento: {{ $viewData["user"]->document }}</h5>
+          <h5 class="new-font">Email: {{ $viewData["user"]->email }}</h5>
+          <h5 class="new-font">Fecha de nacimiento: {{ $viewData["user"]->birthday }}</h5>
+          <h5 class="new-font">Celular: {{ $viewData["user"]->phone }}</h5>
+
+          <h1 class="titulo">Progreso</h1>
+
+          <h3 class="titulo">Autoaceptacion</h3>
+          <div class="progress" style="height: 10%;">
+               <div class="progress-bar yellow" role="progressbar" style="width: {{ $viewData[0] }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <h1 class="titulo white">{{ $viewData[0] }}%</h1>
+               </div>
+          </div>
+          <br>
+          <h3 class="titulo">Dominio del entorno</h3>
+          <div class="progress" style="height: 10%;">
+               <div class="progress-bar orange" role="progressbar" style="width: {{ $viewData[1] }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <h1 class="titulo white">{{ $viewData[1] }}%</h1>
+               </div>
+          </div>
+          <br>
+          <h3 class="titulo">Relaciones positivas con los demás</h3>
+          <div class="progress" style="height: 10%;">
+               <div class="progress-bar pink" role="progressbar" style="width: {{ $viewData[2] }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <h1 class="titulo white">{{ $viewData[2] }}%</h1>
+               </div>
+          </div>
+          <br>
+          <h3 class="titulo">Autonomía</h3>
+          <div class="progress" style="height: 10%;">
+               <div class="progress-bar purple" role="progressbar" style="width: {{ $viewData[3] }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <h1 class="titulo white">{{ $viewData[3] }}%</h1>
+               </div>
+          </div>
+          <br>
+          <h3 class="titulo">Propósito de vida y crecimiento personal</h3>
+          <div class="progress" style="height: 10%;">
+               <div class="progress-bar blue" role="progressbar" style="width: {{ $viewData[4] }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <h1 class="titulo white">{{ $viewData[4] }}%</h1>
+               </div>
+          </div>
+          <br>
+          <br>
+     </div>
+</body>
 @endsection

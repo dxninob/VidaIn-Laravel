@@ -41,24 +41,20 @@ class DoctorController extends Controller
     }
     
     public function show($id) {
-        $viewData = [];
-        $user = User::findOrFail($id);
-        $viewData["user"] = $user;
-
-
         $scores = [];
-        $datos = UserModule::where('user_id', $user->id)->get();
-        foreach($datos as $dato) {
+        $datos = UserModule::where('user_id', $id)->get();
+        foreach ($datos as $dato) {
             array_push($scores, $dato->score);
         }
-        $pScores = [];
-        $totals = [30,30,30,40,65];
-        for ($i = 0; $i < 5; $i++) {
-            $p = $scores[$i]/$totals[$i];
-            array_push($pScores, $p*100);
-        }
-        $viewData['scores'] = $pScores;
 
+        $viewData = [];
+        $totals = [30, 30, 30, 40, 65];
+        for ($i = 0; $i < 5; $i++) {
+            $p = $scores[$i] / $totals[$i] * 100;
+            $p = (int) $p;
+            array_push($viewData, $p);
+        }
+        $viewData["user"] = User::findOrFail($id);
         return view('doctor.show')->with("viewData", $viewData);
     }
 }

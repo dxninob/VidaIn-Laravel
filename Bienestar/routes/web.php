@@ -21,6 +21,7 @@ Route::get('/letra', 'App\Http\Controllers\HomeController@letra')->name('letra')
 Route::get('/emergencia', 'App\Http\Controllers\HomeController@emergencia')->name('emergencia');
 
 Route::get('/login/usuario', 'App\Http\Controllers\AuthController@loginusuario')->name("login.usuario");
+Route::post('/registro/index', 'App\Http\Controllers\AuthController@register')->name("register.all");
 Route::get('/registro/paciente', 'App\Http\Controllers\AuthController@registerPatient')->name("register.patient");
 Route::get('/registro/doctor', 'App\Http\Controllers\AuthController@registerDoctor')->name("register.doctor");
 Route::get('/registro/acompanante', 'App\Http\Controllers\AuthController@registerCuidador')->name("register.cuidador");
@@ -38,6 +39,7 @@ Route::get('/paciente/actividades/{id}', 'App\Http\Controllers\ActivityControlle
 
 Route::get('/acompanante/index', 'App\Http\Controllers\CuidadorController@index')->name('cuidador.index');
 Route::get('/acompanante/actividades', 'App\Http\Controllers\CuidadorController@activities')->name('cuidador.actividades');
+Route::get('/acompanante/resultados', 'App\Http\Controllers\CuidadorController@resultados')->name('cuidador.resultados');
 
 Route::get('/doctor/pacientes', 'App\Http\Controllers\DoctorController@index')->name("doctor.pacientes");
 Route::get('/doctor/pacientes/{id}', 'App\Http\Controllers\DoctorController@show')->name("doctor.show");

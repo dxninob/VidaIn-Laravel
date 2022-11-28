@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Activity;
+use App\Models\UserModule;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class CuidadorController extends Controller
 {
@@ -26,5 +30,25 @@ class CuidadorController extends Controller
         }
         $viewData["activities"] = $activities_array;
         return view('cuidador.actividades')->with("viewData", $viewData);
+    }
+
+    public function resultados()
+    {
+        $scores = [];
+        $user_document = User::findOrFail(Auth::id())->documentPatient;
+        $user = User::where('document', $user_document)->pluck('id')->first();
+        $datos = UserModule::where('user_id', $user)->get();
+        foreach ($datos as $dato) {
+            array_push($scores, $dato->score);
+        }
+
+        $viewData = [];
+        $totals = [30, 30, 30, 40, 65];
+        for ($i = 0; $i < 5; $i++) {
+            $p = $scores[$i] / $totals[$i] * 100;
+            $p = (int) $p;
+            array_push($viewData, $p);
+        }
+        return view('cuidador.resultados')->with("viewData", $viewData);
     }
 }
