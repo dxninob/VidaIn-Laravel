@@ -48,14 +48,6 @@
                 <h1 class="titulo white">{{ $viewData[4] }}%</h1>
             </div>
         </div>
-
-        <div class="boton1">
-            <br>
-            <br>
-            <br>
-            <a id="boton1" href="{{ route('actividades.index') }}">Realizar actividades</a>
-        </div>
-
         <br>
         <br>
     </div>
