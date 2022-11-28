@@ -5,7 +5,7 @@
 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
 
 <body>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register.all') }}">
         @csrf
         <div class="container">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 red">

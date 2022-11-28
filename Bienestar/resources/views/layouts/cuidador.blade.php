@@ -25,7 +25,7 @@
                 @else
                 <li class="nav-item"> <a class="nav-link" href="{{ route('cuidador.index') }}">Inicio</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Progreso</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Resultados</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('cuidador.resultados') }}">Resultados</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#">Modulos</a> </li>
                 <!-- <li class="nav-item"> <a class="nav-link" href="{{ route('actividades.calendario') }}">Calendario</a> </li> -->
                 <form id="logout" action="{{ route('logout') }}" method="POST">
